@@ -1,6 +1,6 @@
 # Apuntes de Vim
 
-Bienvenidos a mi libro de apuntes del editor Vim.
+Este es mi libro de apuntes del editor *Vim*.
 
 ## Tabla de contenido
 
