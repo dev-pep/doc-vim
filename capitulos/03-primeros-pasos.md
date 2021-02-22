@@ -32,7 +32,7 @@ donde \'\<archivo\>\' es un nombre de archivo opcional, que se abrirá automáti
 Podemos observar el símbolo `~` en aquellas líneas donde no hay texto (en el archivo vacío se ve claramente).
 
 Por otro lado, cuando la línea es demasiado grande para encajar dentro de la anchura de la pantalla (o ventana), la línea del archivo (llamada línea física) ocupa varias líneas de pantalla. Sin embargo, si no existen suficientes líneas de pantalla para mostrar la línea física completa, *Vim* no la muestra; solo aparecen símbolos ***@*** en el margen izquierdo, en las líneas de pantalla donde debería aparecer la línea física. En cambio, si la opción ***display*** tiene el valor ***truncate***, entonces se mostrará esa línea hasta donde pueda, exceptuando la última
-línea de pantalla, que mostrará solo \'@@@\'. Para activar esa opción, teclearemos
+línea de pantalla, que mostrará solo ***@@@***. Para activar esa opción, teclearemos
 
 `:set display=truncate`
 
@@ -138,7 +138,7 @@ Otras acciones para moverse por el texto. Aceptan argumento numérico:
 - `{` - Mueve el cursor al principio del párrafo.
 - `}` - Mueve al principio del párrafo siguiente.
 
-*Vim* considera que una *frase* ha terminado después de un signo de puntuación \'?\', \'.\' o \'!\' seguido de algún espacio en blanco (incluyendo espacio, tabulador y/o fin de línea). Del mismo modo, una línea en blanco (sin caracteres de ningún tipo, ni siquiera espacios), es decir, dos o más caracteres de fin de línea consecutivos, marcan el final de un *párrafo*.
+*Vim* considera que una *frase* ha terminado después de un signo de puntuación ***?***, ***.*** o ***!*** seguido de algún espacio en blanco (incluyendo espacio, tabulador y/o fin de línea). Del mismo modo, una línea en blanco (sin caracteres de ningún tipo, ni siquiera espacios), es decir, dos o más caracteres de fin de línea consecutivos, marcan el final de un *párrafo*.
 
 Mediante `C-e` y `C-y` desplazamos el texto hacia arriba y hacia abajo, respectivamente, sin cambiar el cursor de posición en el archivo, a no ser que ese desplazamiento fuese suficiente para hacer desaparecer el cursor de pantalla. En ese caso, sí sería movido para evitar esa desaparición.
 
@@ -161,7 +161,7 @@ Existen varias formas de entrar en modo *Insertar*, que se diferencian por la ac
     Hay que añadir que aquí `w` equivale a `e` (y `W` a `E`), sin incluir nunca espacio blanco posterior a la palabra.
 
     En el caso de `c` (es decir, la secuencia `c` `c`), lo que se elimina es el texto completo de la línea actual, pero no la línea en sí (queda la línea vacía), aunque si incluimos argumento numérico, eliminará todas las líneas especificadas, y solo dejará una línea vacía. En todos los casos vistos, se puede incluir indistintamente argumento numérico justo antes del comando *change*, o justo antes de la acción de desplazamiento. Algunas acciones de desplazamiento, como `C-f`, `C-b`, `C-u` o `C-d` no tienen efecto dentro del comando *change*.
-- `o` - inserta una línea justo después de la línea actual y cambia a modo *Insertar*. Con ***O*** se añade esa línea antes de la línea actual.
+- `o` - inserta una línea justo después de la línea actual y cambia a modo *Insertar*. Con `O` se añade esa línea antes de la línea actual.
 - `s` - elimina el carácter sobre el que está el cursor antes de entrar en modo *Insertar*.
 
 Existe un modo similar a *Insertar*, con la diferencia de que al ir escribiendo, el nuevo texto va sobrescribiendo el texto antiguo. Se trata del modo *Reemplazar*, y se activa mediante `R`.
