@@ -161,6 +161,7 @@ Existen varias formas de entrar en modo *Insertar*, que se diferencian por la ac
     Hay que añadir que aquí `w` equivale a `e` (y `W` a `E`), sin incluir nunca espacio blanco posterior a la palabra.
 
     En el caso de `c` (es decir, la secuencia `c` `c`), lo que se elimina es el texto completo de la línea actual, pero no la línea en sí (queda la línea vacía), aunque si incluimos argumento numérico, eliminará todas las líneas especificadas, y solo dejará una línea vacía. En todos los casos vistos, se puede incluir indistintamente argumento numérico justo antes del comando *change*, o justo antes de la acción de desplazamiento. Algunas acciones de desplazamiento, como `C-f`, `C-b`, `C-u` o `C-d` no tienen efecto dentro del comando *change*.
+
 - `o` - inserta una línea justo después de la línea actual y cambia a modo *Insertar*. Con `O` se añade esa línea antes de la línea actual.
 - `s` - elimina el carácter sobre el que está el cursor antes de entrar en modo *Insertar*.
 
