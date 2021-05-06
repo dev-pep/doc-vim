@@ -171,41 +171,23 @@ Si debemos indicar el carácter guión en sí (`-`), habrá que colocarlo al pri
 En general, los caracteres sin significado especial pueden expresarse precedidos por el carácter de escape sin que ello tenga efecto alguno en la búsqueda. Sin embargo, algunas secuencias con escape tienen un significado especial en sí mismas:
 
 - `\a` coincide con cualquier carácter alfabético. Equivale a `[a-zA-Z]`.
-
 - `\A` coincide con cualquier carácter no alfabético. Equivale a `[^a-zA-Z]`.
-
 - `\l` coincide con cualquier carácter alfabético en minúscula. Equivale a `[a-z]`.
-
 - `\L` coincide con cualquier carácter que no sea alfabético y en minúscula. Equivale a `[^a-z]`.
-
 - `\u` coincide con cualquier carácter alfabético en mayúscula. Equivale a `[A-Z]`.
-
 - `\U` coincide con cualquier carácter que no sea alfabético y en mayúscula. Equivale a `[^A-Z]`.
-
 - `\d` coincide con cualquier carácter numérico. Equivale a `[0-9]`.
-
 - `\D` coincide con cualquier carácter no numérico. Equivale a `[^0-9]`.
-
 - `\x` coincide con cualquier carácter numérico hexadecimal. Equivale a `[0-9a-fA-F]`.
-
 - `\X` coincide con cualquier carácter no numérico hexadecimal. Equivale a `[^0-9a-fA-F]`.
-
 - `\w` coincide con cualquier carácter alfanumérico o guión bajo. Equivale a `[a-zA-Z0-9_]`.
-
 - `\W` coincide con cualquier carácter no alfanumérico ni guión bajo. Equivale a `[^a-zA-Z0-9_]`.
-
 - `\s` coincide con cualquier carácter blanco (espacio o tabulador).
-
 - `\S` coincide con cualquier carácter no blanco.
-
 - `\t` es utilizado *en el patrón de reemplazo* para insertar un tabulador.
-
 - `\r` es utilizado *en el patrón de reemplazo* para insertar un fin de línea.
-
 - `\<` indica principio de palabra.
-
 - `\>` indica final de palabra.
-
 - Para aceptar una coincidencia entre 2 o más patrones alternativos se usa `\|` entre cada alternativa. Por ejemplo: `/alto\|medio\|bajo` coincidirá con cualquiera de los patrones 'alto', 'medio' o 'bajo'.
 
 Veamos ahora un ejemplo de búsqueda codiciosa en contraposición a una búsqueda no codiciosa. Supongamos que tenemos un texto tal que así:

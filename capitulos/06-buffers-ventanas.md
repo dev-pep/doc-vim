@@ -25,13 +25,9 @@ En ese caso, el alternativo pasa a ser el *buffer* actual, y viceversa.
 Para que el contenido de la ventana actual muestre otro *buffer* distinto al que está mostrando, a parte de abrir un archivo distinto, nos podemos mover por la lista de *buffers* con estos comandos:
 
 - `:buffer <N>` cambia al *buffer* número \<N\>.
-
 - `:bn` cambia al siguiente *buffer* de la lista, de forma cíclica.
-
 - `:bN` cambia al anterior, de forma cíclica.
-
 - `:bf` cambia al primer *buffer* de la lista.
-
 - `:bl` cambia al último.
 
 A parte de la lista de *buffers*, existe otra lista, subconjunto de esta, que incluye los que podríamos denominar *buffers* argumento. Se trata de una lista con los *buffers* correspondientes a los archivos que se especificaron en la línea de comandos al invocar *Vim*. Por ejemplo, si invocamos el editor así:
@@ -41,13 +37,9 @@ A parte de la lista de *buffers*, existe otra lista, subconjunto de esta, que in
 y posteriormente abrimos (por ejemplo con `:e`) los archivos 'file3.txt' y 'file4.txt', tendremos una lista de *buffers* con cuatro elementos ('file1.txt', 'file2.txt', 'file3.txt' y 'file4.txt'), mientras que tendremos una lista de *buffers* argumento con dos elementos ('file1.txt' y 'file2.txt'). Para que una ventana pase a mostrar el contenido de un *buffer* argumento, tenemos los siguientes comandos:
 
 - `:argument <N>` cambia al *buffer* argumento con número \<N\>.
-
 - `:n` cambia al siguiente *buffer* argumento de la lista.
-
 - `:N` cambia al anterior *buffer* argumento.
-
 - `:first` cambia al primer *buffer* argumento de la lista.
-
 - `:last` cambia al último de la lista.
 
 Hay que tener en cuenta que cada una de las dos listas tiene su propio apuntador independiente, y que la lista de *buffers* argumento no es circular.
@@ -131,7 +123,6 @@ Con `C-w w` nos desplazamos a siguiente ventana (si la hay). El concepto de «si
 Si la ventana actual ha sido creada a base de subdividir (en dos o más) una ventana que inicialmente ocupaba todo el ancho o alto de la pantalla, podemos utilizar estas acciones:
 
 - `C-w r` avanza una posición, hacia la derecha o hacia abajo, dependiendo de si la ventana inicial antes de la subdivisión ocupaba todo el ancho o todo el alto de la pantalla. El avance se realiza de forma cíclica.
-
 - `C-w R` hace lo mismo en sentido contrario, es decir, retrocede hacia la izquierda o hacia arriba, también de forma circular.
 
 Por ejemplo, si una ventana que ocupaba todo el ancho de la pantalla queda subdividida verticalmente (`:vsplit`) en dos o más ventanas, podremos movernos por estas ventanas con estos comandos hacia la derecha e izquierda. Análogamente, si una ventana que ocupaba todo el alto de la pantalla queda subdividida horizontalmente (`:split`) en dos o más ventanas, podremos movernos por estas con estos comandos hacia arriba y abajo.
