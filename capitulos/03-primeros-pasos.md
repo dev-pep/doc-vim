@@ -27,7 +27,7 @@ o
 
 `vim <archivo>`
 
-donde \'\<archivo\>\' es un nombre de archivo opcional, que se abrirá automáticamente si existe. Si no se especifica, *Vim* se inicia con un archivo vacío sin nombre. Si se especifica un nombre pero el archivo no existe, se iniciará con un archivo vacío con ese nombre, y no será creado en disco hasta que se guarde explícitamente.
+donde '\<archivo\>' es un nombre de archivo opcional, que se abrirá automáticamente si existe. Si no se especifica, *Vim* se inicia con un archivo vacío sin nombre. Si se especifica un nombre pero el archivo no existe, se iniciará con un archivo vacío con ese nombre, y no será creado en disco hasta que se guarde explícitamente.
 
 Podemos observar el símbolo `~` en aquellas líneas donde no hay texto (en el archivo vacío se ve claramente).
 
@@ -116,12 +116,12 @@ Existen varias órdenes que mueven el cursor de forma rápida. Muchas de estas a
 
 Las siguientes acciones actúan sobre las **líneas de pantalla**, que pueden no coincidir con las del archivo:
 
-- `g` `k` - mueve el cursor una línea de pantalla hacia arriba. Acepta argumento numérico.
-- `g` `j` - mueve una línea de pantalla hacia abajo. Acepta argumento numérico.
-- `g` `0` - mueve al principio de la línea de pantalla actual.
-- `g` `^` - mueve al primer carácter no blanco de la línea de pantalla actual (si son todos blancos, al último de ellos).
-- `g` `m` - mueve al centro (en anchura) de la pantalla.
-- `g` `$` - mueve al último carácter de la línea actual de pantalla.
+- `gk` - mueve el cursor una línea de pantalla hacia arriba. Acepta argumento numérico.
+- `gj` - mueve una línea de pantalla hacia abajo. Acepta argumento numérico.
+- `g0` - mueve al principio de la línea de pantalla actual.
+- `g^` - mueve al primer carácter no blanco de la línea de pantalla actual (si son todos blancos, al último de ellos).
+- `gm` - mueve al centro (en anchura) de la pantalla.
+- `g$` - mueve al último carácter de la línea actual de pantalla.
 
 Las siguientes acciones avanzan/retroceden el cursor en función del tamaño de la pantalla:
 
