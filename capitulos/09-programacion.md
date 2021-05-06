@@ -206,7 +206,7 @@ abre el pliegue en la línea 25, mientras que
 
 contraería todos los pliegues que tengan alguna línea entre la 13 y la 30.
 
-Estos dos comandos no son recursivos, con lo que no cierran más de un pliegue a la vez aunque se trate de un pliegue anidado. En ese caso, ***:foldopen*** abriría el pliegue contraído más exterior posible, mientras que ***:foldclose*** cerraría el más interior posible.
+Estos dos comandos no son recursivos, con lo que no cierran más de un pliegue a la vez aunque se trate de un pliegue anidado. En ese caso, `:foldopen` abriría el pliegue contraído más exterior posible, mientras que `:foldclose` cerraría el más interior posible.
 
 ### Movimiento por pliegues y secciones
 
@@ -280,7 +280,7 @@ Para un uso correcto, debemos tener en cuenta el directorio de trabajo al ejecut
 
 `:pwd`
 
-Si deseamos cambiar dicho directorio, podemos usar el comando ***:cd*** desde el mismo *Vim*.
+Si deseamos cambiar dicho directorio, podemos usar el comando :cd` desde el mismo *Vim*.
 
 Una vez hayamos creado un archivo *tags* en el directorio de trabajo, podremos acceder a la funcionalidad de etiquetas.
 
@@ -292,7 +292,7 @@ Si estamos editando un archivo y queremos examinar la definición de una funció
 
 y *Vim* nos llevará al punto exacto donde se encuentra esa definición, abriendo el archivo adecuado si es necesario. Hay que tener en cuenta que si ello representa cerrar el archivo actual y existen cambios sin guardar en este, deberemos guardarlo antes o especificar el forzado de esta acción con '!' para asumir la pérdida de esos cambios.
 
-Una vez examinada la información que deseábamos ver acerca de esa función, podemos volver al punto donde estábamos antes de ejecutar el comando ***:tag*** introduciendo
+Una vez examinada la información que deseábamos ver acerca de esa función, podemos volver al punto donde estábamos antes de ejecutar el comando `:tag` introduciendo
 
 `:pop`
 

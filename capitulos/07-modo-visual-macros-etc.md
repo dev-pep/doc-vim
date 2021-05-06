@@ -75,7 +75,7 @@ El proceso de grabación de una macro es muy simple. Asumimos que empezamos la g
 
 Para invocar posteriormente esa macro, simplemente debemos pulsar, desde modo *Normal*, `@` y a continuación la letra correspondiente al registro donde hayamos almacenado la macro.
 
-Para repetir la última macro invocada, podemos utilizar ***@@***.
+Para repetir la última macro invocada, podemos utilizar `@@`.
 
 Veamos un ejemplo: Si queremos crear una macro que simplemente inserte tres asteriscos ('\*\*\*') justo antes de la posición del cursor, y asociar esa acción al registro 'k', teclearemos:
 
