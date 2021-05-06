@@ -118,7 +118,7 @@ Aunque los mapeos se pueden definir sobre la marcha dentro de una sesión de *Vi
 
 Hay que tener en cuenta que los atajos de teclado se deben definir para un modo o conjunto de modos concreto. La forma más simple de definir un mapeo es mediante un comando de mapeo seguido de una secuencia de una o más teclas a mapear, y finalmente la secuencia de acciones que se ejecutarán cuando se invoque ese atajo de teclado.
 
-A la hora de crear un atajo, *Vim* distingue entre los modos *Normal*, *Insertar*, *Visual*, *Selección*, *Comando* y *Pendiente*. El modo *Selección* tiene poco interés, y es una variante del modo *Visual*. El modo *Pendiente* se refiere al momento concreto en que dentro del modo *Normal* hemos empezado a pulsar una secuencia de acciones y *Vim* está a la espera del resto de la secuencia. Por ejemplo, después de pulsar ***y*** para una acción *yank*, y antes de definir la acción de movimiento.
+A la hora de crear un atajo, *Vim* distingue entre los modos *Normal*, *Insertar*, *Visual*, *Selección*, *Comando* y *Pendiente*. El modo *Selección* tiene poco interés, y es una variante del modo *Visual*. El modo *Pendiente* se refiere al momento concreto en que dentro del modo *Normal* hemos empezado a pulsar una secuencia de acciones y *Vim* está a la espera del resto de la secuencia. Por ejemplo, después de pulsar `y` para una acción *yank*, y antes de definir la acción de movimiento.
 
 *Vim* asocia una letra prefijo a cada uno de estos modos: 'n' (*Normal*), 'i' (*Insertar* y *Reemplazar*), 'v' (*Visual* y *Selección*), 's' (*Selección*), 'x' (*Visual*), 'c' (*Comando*) y 'o' (*Pendiente*, *operator-pending*). Cabe añadir que el prefijo 'c' se refiere también a las búsquedas (con `/` o `?`).
 
@@ -268,7 +268,7 @@ Hay que tener en cuenta también que en *Vim* existe la siguente equivalencia de
 
 ## Definición de macros en .vimrc
 
-En el apartado sobre macros vimos dos formas de definirlas: mediante ***@*** en modo *Normal*, o almacenando directamente el texto de los mismos en los registros correspondientes. Existe otra forma que consiste en definir el contenido de un registro con el comando `:let`.
+En el apartado sobre macros vimos dos formas de definirlas: mediante `@` en modo *Normal*, o almacenando directamente el texto de los mismos en los registros correspondientes. Existe otra forma que consiste en definir el contenido de un registro con el comando `:let`.
 
 A este comando hay que pasarle por parámetro la letra correspondiente al registro que deseamos cambiar, precedida por '@'; seguidamente un signo '=' y el texto que debe almacenarse en el registro, entre comillas simples. Por ejemplo:
 

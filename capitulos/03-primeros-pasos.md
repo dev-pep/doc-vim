@@ -31,8 +31,7 @@ donde '\<archivo\>' es un nombre de archivo opcional, que se abrirá automática
 
 Podemos observar el símbolo `~` en aquellas líneas donde no hay texto (en el archivo vacío se ve claramente).
 
-Por otro lado, cuando la línea es demasiado grande para encajar dentro de la anchura de la pantalla (o ventana), la línea del archivo (llamada línea física) ocupa varias líneas de pantalla. Sin embargo, si no existen suficientes líneas de pantalla para mostrar la línea física completa, *Vim* no la muestra; solo aparecen símbolos ***@*** en el margen izquierdo, en las líneas de pantalla donde debería aparecer la línea física. En cambio, si la opción ***display*** tiene el valor ***truncate***, entonces se mostrará esa línea hasta donde pueda, exceptuando la última
-línea de pantalla, que mostrará solo ***@@@***. Para activar esa opción, teclearemos
+Por otro lado, cuando la línea es demasiado grande para encajar dentro de la anchura de la pantalla (o ventana), la línea del archivo (llamada línea física) ocupa varias líneas de pantalla. Sin embargo, si no existen suficientes líneas de pantalla para mostrar la línea física completa, *Vim* no la muestra; solo aparecen símbolos ***@*** en el margen izquierdo, en las líneas de pantalla donde debería aparecer la línea física. En cambio, si la opción `display` tiene el valor `truncate`, entonces se mostrará esa línea hasta donde pueda, exceptuando la última línea de pantalla, que mostrará solo ***@@@***. Para activar esa opción, teclearemos
 
 `:set display=truncate`
 
