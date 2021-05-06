@@ -1,6 +1,6 @@
 # Apuntes de Vim
 
-Este es mi libro de apuntes del editor *Vim*.
+Estos son mis apuntes sobre el editor *Vim*.
 
 ## Tabla de contenido
 
