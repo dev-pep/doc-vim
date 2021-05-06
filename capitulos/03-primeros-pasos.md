@@ -56,7 +56,7 @@ Estas dos acciones se pueden combinar en una sola:
 
 La otra forma es salir descartando los cambios mediante
 
-`:q!``
+`:q!`
 
 Si queremos guardar el archivo actual con otro nombre, teclearemos
 
