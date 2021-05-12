@@ -14,7 +14,7 @@ Existen tres formas de entrar en modo *Visual*, al que se accede desde el modo *
 
 - Modo de *Bloque Visual* (`C-v`) - en este caso se resaltará el texto incluido en el rectángulo formado por las dos posiciones del cursor (inicial y final, ambas incluidas). Dichas posiciones indicarán dos esquinas opuestas de un rectángulo de selección.
 
-Mientras podamos ver el texto resaltado, permaneceremos en modo *Visual*. Hay dos formas básicas de salir de ese modo: presionar `<Esc>` para cancelar la operación, o presionar una tecla de acción que actúe sobre el texto resaltado.
+Mientras podamos ver el texto resaltado, permaneceremos en modo *Visual*. Hay dos formas básicas de salir de ese modo: presionar `Esc` para cancelar la operación, o presionar una tecla de acción que actúe sobre el texto resaltado.
 
 Por ejemplo, estando en modo *Visual*, con el texto resaltado, podemos realizar cualquiera de las acciones de *yank*, *change* o *delete*, para posteriormente hacer un *put* del texto pertinente. Pero también se pueden realizar otras operaciones con el texto resaltado, como por ejemplo cambiar el estado de mayúscula o minúscula del texto seleccionado mediante `~`. Una vez realizada la operación correspondiente, el editor vuelve automáticamente al modo *Normal*.
 
@@ -93,7 +93,7 @@ Ahora ya estaríamos en posición de ejecutar la macro mediante `@k`, y posterio
 
 Del mismo modo, existe otra forma de definir una macro, y es escribiendo las acciones en el texto que estamos editando, o modificando una macro insertada en el texto, y posteriormente copiando ese fragmento resultante hacia uno de los registros nuevamente.
 
-Este sistema presenta una peculiaridad: hay que tener en cuenta que a la hora de ejecutar esa macro, cada uno de los caracteres de ese texto en el registro será interpretado como una sola acción (pulsación) de teclado. Por lo tanto, ¿cómo insertamos por escrito pulsaciones de teclas como `<Esc>`, `<Intro>` o `C-w`?
+Este sistema presenta una peculiaridad: hay que tener en cuenta que a la hora de ejecutar esa macro, cada uno de los caracteres de ese texto en el registro será interpretado como una sola acción (pulsación) de teclado. Por lo tanto, ¿cómo insertamos por escrito pulsaciones de teclas como `Esc`, `Intro` o `C-w`?
 
 La solución es la orden `C-v` *al introducir texto*. Esta acción es válida en los modos *Insertar*, *Reemplazar* y *Comando*, así como en la introducción de patrones de búsqueda de texto (mediante `/` o `?`). Estando en alguno de estos modos o estados, cuando deseemos añadir una de estas teclas especiales, presionaremos `C-v`, y a continuación, la tecla concreta que deseamos insertar.
 

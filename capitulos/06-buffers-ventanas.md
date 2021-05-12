@@ -169,6 +169,6 @@ Si queremos cerrar todas las pestañas excepto la actual:
 
 Si el cierre de pestañas que intentamos realizar va a cerrar todas las referencias a un *buffer* con cambios sin guardar, no nos permitirá cerrar esas ventanas, que seguirán abiertas (cerrará solo las que pueda). Para remediarlo, podemos guardar los cambios, forzar la pérdida de cambios (`:tabclose!`), o usar la opción `hidden` como hemos visto anteriormente.
 
-Para cambiar de pestaña usaremos `C-<PgUp>` (Control con página arriba), que cambiará a la pestaña de la izquierda, o `C-<PgDn>` (Control con página abajo) para cambiar a la de la derecha.
+Para cambiar de pestaña usaremos `C-PgUp` (Control con página arriba), que cambiará a la pestaña de la izquierda, o `C-PgDn` (Control con página abajo) para cambiar a la de la derecha.
 
 Si estamos en una pestaña con más de una ventana, mediante `C-w T` movemos la ventana actual a una nueva pestaña. De lo contrario, no hace nada.

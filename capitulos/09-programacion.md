@@ -70,23 +70,23 @@ Existe un mecanismo automático en *Vim* que resulta muy útil a la hora de reda
 
 El mecanismo de tabulación consiste en dividir la anchura de la pantalla en una serie de puntos (*tab stops*) o columnas específicas para alinear elementos de texto verticalmente.
 
-Las explicaciones sobre la inserción y borrado de tabuladores con las teclas `<Tab>` y retroceso deben entenderse siempre realizadas en modo *Insertar* (o *Reemplazar*).
+Las explicaciones sobre la inserción y borrado de tabuladores con las teclas `Tab` y retroceso deben entenderse siempre realizadas en modo *Insertar* (o *Reemplazar*).
 
-Al presionar la tecla `<Tab>`, se insertará un carácter tabulador en el texto, cuya función es desplazar el cursor al siguiente *tab stop*. Hay que recalcar que aunque esto haga avanzar el cursor varias posiciones, el carácter tabulador insertado es *un solo carácter*.
+Al presionar la tecla `Tab`, se insertará un carácter tabulador en el texto, cuya función es desplazar el cursor al siguiente *tab stop*. Hay que recalcar que aunque esto haga avanzar el cursor varias posiciones, el carácter tabulador insertado es *un solo carácter*.
 
 Para definir la posición de estos puntos de tabulación, disponemos de la opción `tabstop`, cuyo valor por defecto es 8. De esta manera, podemos saber qué columnas forman los *tab stops*: si partimos de la primera columna de la pantalla (la 1) y le vamos sumando el valor de `tabstop`, nos aparecen puntos de tabulación en las columnas 9, 17, 25, 33, etc. Al insertar un carácter tabulador al escribir, aparecerá un espacio en blanco más o menos ancho que llevará el cursor hasta el siguiente *tab stop*.
 
 Si cambiamos el valor de esta opción mientras visualizamos un archivo que contenga ya tabuladores, veremos que se producen cambios visibles en estos espacios, ya que los puntos de tabulación cambiarán sus posiciones.
 
-Existe otra opción interesante, `expandtab`, desactivada por defecto. Si la activamos, al pulsar `<Tab>` no se insertará ningún carácter tabulador, sino una secuencia de espacios que adelantarán el cursor hasta el siguiente punto de tabulación.
+Existe otra opción interesante, `expandtab`, desactivada por defecto. Si la activamos, al pulsar `Tab` no se insertará ningún carácter tabulador, sino una secuencia de espacios que adelantarán el cursor hasta el siguiente punto de tabulación.
 
 Modificar esta opción no afecta a los caracteres tabulador ni a los espacios presentes ya en el archivo con anterioridad, sino únicamente a los tabuladores que se insertarán posteriormente.
 
-Cuando `expandtab` no está activado, `<Tab>` inserta un tabulador; si a continuación pulsamos la tecla de retroceso, ese tabulador será eliminado. En cambio, con `expandtab` activado, `<Tab>` insertará una secuencia de espacios; si seguidamente pulsamos la tecla de retroceso, únicamente el último espacio quedará borrado. Este comportamiento extraño es el que intenta corregir la opción `softtabstop`.
+Cuando `expandtab` no está activado, `Tab` inserta un tabulador; si a continuación pulsamos la tecla de retroceso, ese tabulador será eliminado. En cambio, con `expandtab` activado, `Tab` insertará una secuencia de espacios; si seguidamente pulsamos la tecla de retroceso, únicamente el último espacio quedará borrado. Este comportamiento extraño es el que intenta corregir la opción `softtabstop`.
 
-Por defecto, `softtabstop` tiene valor 0, es decir, está desactivada. Si le damos un valor positivo, creará unos puntos de tabulación lógicos, que podemos llamar *soft tab stops*, y pueden tener un tamaño distinto a los *tab stops* reales. Estos nuevos puntos serán los que se tendrán en cuenta al pulsar la tecla `<Tab>` o la tecla de retroceso. Para que el cursor quede en el *soft tab stop* correspondiente, *Vim* reorganizará cada vez el espacio en blanco, utilizando caracteres de tabulación (donde pueda) y espacios. De este modo, al pulsar retroceso y `<Tab>`, tendremos la sensación de que el tamaño de los puntos de tabulación es el definido en `softtabstop`. Sin embargo, si movemos el cursor por el espacio en blanco, observaremos que los espacios en blanco que va dejando `<Tab>` no se corresponden exactamente con un carácter tabulador.
+Por defecto, `softtabstop` tiene valor 0, es decir, está desactivada. Si le damos un valor positivo, creará unos puntos de tabulación lógicos, que podemos llamar *soft tab stops*, y pueden tener un tamaño distinto a los *tab stops* reales. Estos nuevos puntos serán los que se tendrán en cuenta al pulsar la tecla `Tab` o la tecla de retroceso. Para que el cursor quede en el *soft tab stop* correspondiente, *Vim* reorganizará cada vez el espacio en blanco, utilizando caracteres de tabulación (donde pueda) y espacios. De este modo, al pulsar retroceso y `Tab`, tendremos la sensación de que el tamaño de los puntos de tabulación es el definido en `softtabstop`. Sin embargo, si movemos el cursor por el espacio en blanco, observaremos que los espacios en blanco que va dejando `<Tab>` no se corresponden exactamente con un carácter tabulador.
 
-El *tamaño real del carácter tabulador* seguirá siendo el que marca `tabstop`, pero el *comportamiento de las teclas \<Tab\> y retroceso* será como si el tamaño del tabulador fuese el definido en `softtabstop`.
+El *tamaño real del carácter tabulador* seguirá siendo el que marca `tabstop`, pero el *comportamiento de las teclas `Tab` y retroceso* será como si el tamaño del tabulador fuese el definido en `softtabstop`.
 
 Podemos verlo más fácilmente experimentando con este mecanismo mientras está activa la opción `list`, que muestra los caracteres no imprimibles en pantalla, incluyendo los caracteres tabulador.
 
@@ -108,7 +108,7 @@ Si queremos modificar la indentación de una sola línea, nos colocaremos en ell
 
 Cualquier operación de cambio de indentación, así como la inserción de indentación automática (que veremos a continuación), reorganizan la sangría inicial en tabuladores y espacios según la configuración de las opciones `tabstop` y/o `expandtab`, igual que hacían las operaciones de inserción y borrado de *soft tabs*.
 
-Existe una opción, `smarttab`, que marca el funcionamiento de las teclas `<Tab>` y retroceso. Cuando la pulsación se produce tras la sangría inicial, dentro del texto posterior, el funcionamiento de estas teclas es el habitual según las opciones de tabulación. Sin embargo, cuando la inserción o borrado se produce al principio de línea o dentro del espacio de indentación de la línea, estas teclas funcionan según los puntos de indentación definidos en `shiftwidth`. Tras cada cambio en la indentación, ese espacio es reorganizado en tabuladores y espacios como sucedía con `softtabstop`.
+Existe una opción, `smarttab`, que marca el funcionamiento de las teclas `Tab` y retroceso. Cuando la pulsación se produce tras la sangría inicial, dentro del texto posterior, el funcionamiento de estas teclas es el habitual según las opciones de tabulación. Sin embargo, cuando la inserción o borrado se produce al principio de línea o dentro del espacio de indentación de la línea, estas teclas funcionan según los puntos de indentación definidos en `shiftwidth`. Tras cada cambio en la indentación, ese espacio es reorganizado en tabuladores y espacios como sucedía con `softtabstop`.
 
 ### Autoindentación
 
@@ -306,7 +306,7 @@ Es posible utilizar el mecanismo de etiquetas desde modo *Normal*. Para ello hay
 
 El mecanismo se utiliza desde el modo *Insertar* (o *Reemplazar*) y nos lleva a un modo especial, llamado modo *Completar* (*Completion mode*), en el que las sugerencias aparecen en una lista que va cambiando dinámicamente según vamos escribiendo.
 
-En lugar de escribir, podemos movernos por los elementos de la lista de sugerencias mediante `C-n` (siguiente elemento) y `C-p` (elemento anterior). Cuando vemos el elemento que nos interesa insertar, nos desplazamos hasta él y pulsamos `<Intro>`, de tal modo que la palabra será insertada y saldremos de modo *Completar* (regresando a modo *Insertar*). Si queremos salir de ese modo sin aceptar ninguna sugerencia, debemos pulsar `C-e`. Si lo hacemos con `<Esc>`, aceptaremos la sugerencia y saldremos, pero pasando a modo *Normal* en lugar de regresar a modo *Insertar*.
+En lugar de escribir, podemos movernos por los elementos de la lista de sugerencias mediante `C-n` (siguiente elemento) y `C-p` (elemento anterior). Cuando vemos el elemento que nos interesa insertar, nos desplazamos hasta él y pulsamos `Intro`, de tal modo que la palabra será insertada y saldremos de modo *Completar* (regresando a modo *Insertar*). Si queremos salir de ese modo sin aceptar ninguna sugerencia, debemos pulsar `C-e`. Si lo hacemos con `Esc`, aceptaremos la sugerencia y saldremos, pero pasando a modo *Normal* en lugar de regresar a modo *Insertar*.
 
 Para entrar en el modo *Completar*, debemos estar en modo *Insertar* y teclear el principio de la palabra que deseamos completar. Seguidamente pulsaremos `C-x`. En este momento, *Vim* esperará una segunda pulsación que indique la fuente donde buscar las sugerencias. De las distintas posibilidades, podemos destacar las siguientes:
 
