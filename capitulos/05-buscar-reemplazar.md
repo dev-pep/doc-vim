@@ -22,7 +22,7 @@ Podemos buscar cualquier patrón de texto utilizando la acción
 
 `/<patrón>`
 
-Donde \<patrón\> es el texto a buscar. La acción debe terminarse con un `<Intro>`. Esto buscará el patrón dentro del archivo entero. La búsqueda se efectúa hacia adelante, y se inicia en la posición del cursor. Si no se encuentra ninguna coincidencia antes del fin de archivo, continúa buscando desde el principio.
+Donde \<patrón\> es el texto a buscar. La acción debe terminarse con un `Intro`. Esto buscará el patrón dentro del archivo entero. La búsqueda se efectúa hacia adelante, y se inicia en la posición del cursor. Si no se encuentra ninguna coincidencia antes del fin de archivo, continúa buscando desde el principio.
 
 La acción de la búsqueda mueve el cursor a la posición inicial del patrón encontrado. Si no existe coincidencia en el archivo, el cursor no se mueve.
 
@@ -40,7 +40,7 @@ Las búsquedas tienen su propio historial, al que puede accederse con las flecha
 
 Si queremos buscar solo palabras completas, debemos incluir los espacios pertinentes (o signos de puntuación deseados) en el patrón.
 
-Dado que estas acciones de búsqueda son, en realidad, comandos de desplazamiento del cursor, pueden combinarse con las acciones `d` (*delete*), `c` (*change*) o `y` (*yank*). Por ejemplo, la acción `d?la` seguida de `<Intro>` borrará el texto existente entre la posición actual del cursor y la anterior coincidencia del texto \'la\'. Se pueden sofisticar estos borrados o copiados utilizando argumento numérico.
+Dado que estas acciones de búsqueda son, en realidad, comandos de desplazamiento del cursor, pueden combinarse con las acciones `d` (*delete*), `c` (*change*) o `y` (*yank*). Por ejemplo, la acción `d?la` seguida de `Intro` borrará el texto existente entre la posición actual del cursor y la anterior coincidencia del texto \'la\'. Se pueden sofisticar estos borrados o copiados utilizando argumento numérico.
 
 ## Reemplazar (substitute)
 

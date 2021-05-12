@@ -228,7 +228,7 @@ al pulsar `b` en modo *Insertar* no se producirá ningún tipo de sustitución e
 
 ### Notación de teclas
 
-A la hora de describir los mapeos, hay que hacer referencia con frecuencia a ciertas combinaciones de teclas como `<Esc>`, `<Intro>` u otras del tipo `C-w`. ¿Cómo podemos escribir estas teclas en la definición?
+A la hora de describir los mapeos, hay que hacer referencia con frecuencia a ciertas combinaciones de teclas como `Esc`, `Intro` u otras del tipo `C-w`. ¿Cómo podemos escribir estas teclas en la definición?
 
 Una solución a este problema la vimos cuando definíamos macros por escrito. Al escribir la macro, pulsábamos `C-v` seguido de la tecla que deseábamos insertar. Esta solución sigue siendo útil en la definición de mapeos, tanto para la secuencia de teclas a mapear, como en la secuencia que definamos para esas teclas.
 
@@ -264,7 +264,7 @@ Veamos un ejemplo con esta notación:
 
 En este caso, cada vez que tecleemos `C-b` en modo *Insertar*, se insertarán tres caracteres en el texto: 'a', '\<C-b\>' (se verá en pantalla como *\^B*) y 'c'.
 
-Hay que tener en cuenta también que en *Vim* existe la siguente equivalencia de teclas: `C-i` equivale al tabulador, `C-[` equivale a `<Esc>`, `C-m` equivale a `<Intro>` y `C-h` equivale a la tecla de retroceso. Pueden utilizarse indistintamente cualquiera de las dos formas.
+Hay que tener en cuenta también que en *Vim* existe la siguente equivalencia de teclas: `C-i` equivale al tabulador, `C-[` equivale a `Esc`, `C-m` equivale a `Intro` y `C-h` equivale a la tecla de retroceso. Pueden utilizarse indistintamente cualquiera de las dos formas.
 
 ## Definición de macros en .vimrc
 
