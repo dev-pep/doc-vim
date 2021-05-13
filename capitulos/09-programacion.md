@@ -58,7 +58,7 @@ De todas formas, no es muy aconsejable en programación tener líneas tan largas
 
 Para tener un margen a la derecha del texto, evitando así la creación de líneas demasiado largas, debemos insertar finales de línea adecuadamente. Existe un modo de hacerlo de forma automática, definiendo la anchura máxima de texto con la opción `textwidth`, a la que debemos asignar el número máximo de columnas que vamos a permitir:
 
-:set textwidth=50
+`:set textwidth=50`
 
 establece una anchura máxima de 50 columnas de pantalla. A medida que escribamos, *Vim* insertará un fin de línea cada vez que tecleemos un carácter no blanco más allá del umbral definido. El fin de línea se inserta entre palabras para que no quede ninguna palabra partida, si es posible. Los caracteres blancos justo antes y después del fin de línea creado son eliminados.
 
@@ -280,7 +280,7 @@ Para un uso correcto, debemos tener en cuenta el directorio de trabajo al ejecut
 
 `:pwd`
 
-Si deseamos cambiar dicho directorio, podemos usar el comando :cd` desde el mismo *Vim*.
+Si deseamos cambiar dicho directorio, podemos usar el comando `:cd` desde el mismo *Vim*.
 
 Una vez hayamos creado un archivo *tags* en el directorio de trabajo, podremos acceder a la funcionalidad de etiquetas.
 
