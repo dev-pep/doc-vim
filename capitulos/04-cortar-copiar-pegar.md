@@ -145,7 +145,7 @@ A la hora de definir números de línea, existen algunos caracteres especiales:
 - `%` es un rango equivalente a `1,$` es decir, todas las líneas del archivo.
 - Se puede sumar o restar cualquier número a una posición específica. Por ejemplo, `.+5` se refiere a 5 líneas más allá de la línea actual. `$-2` es la antepenúltima línea del archivo. Si no se especifica la posición de referencia, se entiende la línea actual:
 
-    `+3` o `-5` equivalen respectivamente a `.+3` y `.-5`. Si no se especifica número, se entiende 1, es decir, `+` equivale a `.+1` (línea siguiente a la actual) y `$-` es la penúltima línea. Se pueden repetir los signos: `.+++`, `$--`, o incluso `20----` (línea 16).
+> `+3` o `-5` equivalen respectivamente a `.+3` y `.-5`. Si no se especifica número, se entiende 1, es decir, `+` equivale a `.+1` (línea siguiente a la actual) y `$-` es la penúltima línea. Se pueden repetir los signos: `.+++`, `$--`, o incluso `20----` (línea 16).
 
 Veamos algunos ejemplos:
 

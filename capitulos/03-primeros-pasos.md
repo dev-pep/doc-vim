@@ -157,9 +157,9 @@ Existen varias formas de entrar en modo *Insertar*, que se diferencian por la ac
 - `a` - añade (*append*) texto después del cursor. `A` se desplaza al último carácter de la línea antes de cambiar de modo (útil para añadir texto a final de línea).
 - `c` - cambia (*change*) el texto definido por la tecla que se pulsa justo después de la `c` mediante una acción de desplazamiento del cursor como las que ya hemos visto. La secuencia borra todos los caracteres desde la posición del cursor (incluida) hasta el lugar definido (`0`, `^`, `$`, `w`, `e`, `b`, etc.). A continuación cambia a modo *Insertar*.
 
-    Hay que añadir que aquí `w` equivale a `e` (y `W` a `E`), sin incluir nunca espacio blanco posterior a la palabra.
-
-    En el caso de `c` (es decir, la secuencia `c` `c`), lo que se elimina es el texto completo de la línea actual, pero no la línea en sí (queda la línea vacía), aunque si incluimos argumento numérico, eliminará todas las líneas especificadas, y solo dejará una línea vacía. En todos los casos vistos, se puede incluir indistintamente argumento numérico justo antes del comando *change*, o justo antes de la acción de desplazamiento. Algunas acciones de desplazamiento, como `C-f`, `C-b`, `C-u` o `C-d` no tienen efecto dentro del comando *change*.
+> Hay que añadir que aquí `w` equivale a `e` (y `W` a `E`), sin incluir nunca espacio blanco posterior a la palabra.
+>
+> En el caso de `c` (es decir, la secuencia `c` `c`), lo que se elimina es el texto completo de la línea actual, pero no la línea en sí (queda la línea vacía), aunque si incluimos argumento numérico, eliminará todas las líneas especificadas, y solo dejará una línea vacía. En todos los casos vistos, se puede incluir indistintamente argumento numérico justo antes del comando *change*, o justo antes de la acción de desplazamiento. Algunas acciones de desplazamiento, como `C-f`, `C-b`, `C-u` o `C-d` no tienen efecto dentro del comando *change*.
 
 - `o` - inserta una línea justo después de la línea actual y cambia a modo *Insertar*. Con `O` se añade esa línea antes de la línea actual.
 - `s` - elimina el carácter sobre el que está el cursor antes de entrar en modo *Insertar*.
