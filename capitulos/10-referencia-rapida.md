@@ -22,7 +22,7 @@ Movimiento del cursor:
 | Orden                | Acción                                                   |
 | :------------------- | :------------------------------------------------------- |
 | `h`, `j`, `k`, `l`   | Izquierda, abajo, arriba, derecha                        |
-| `<N>\|`               | Número de columna                                        |
+| `<N>|`               | Número de columna                                        |
 | `0`, `^`             | Principio, primer blanco de línea                        |
 | `$`                  | Fin de línea                                             |
 | `w`, `W`             | Principio siguiente palabra (sin signos, con signos)     |
@@ -51,7 +51,7 @@ Movimiento del cursor:
 | `[z`, `zj`           | Retrocede, avanza por primeras líneas de pliegues        |
 | `zk`, `]z`           | Retrocede, avanza por últimas líneas de pliegues         |
 | `%`                  | Desplazar al porcentaje indicado                         |
-| `` `<a>``, `` `<A>`` | Ir a una marca local, global                             |
+| `` `<a>``, `` `<A>``     | Ir a una marca local, global                             |
 | `'<a>`, `'<A>`       | Ir a principio de línea que contenga marca local, global |
 
 Cambio a modo *Insertar*:
@@ -76,7 +76,7 @@ Varios:
 | `dd`                 | *Delete* línea actual                                    |
 | `D`                  | Equivale a `d$`                                          |
 | `x`, `X`             | Eliminar carácter debajo, antes del cursor               |
-| `y`                  | *Yank*                                                   |
+| `y <mov>`            | *Yank* fragmento indicado                                |
 | `yy`<br>`Y`          | *Yank* línea actual                                      |
 | `p`, `P`             | *Put* después, antes                                     |
 | `"<R><acc>`          | Acción con el registro especificado                      |
@@ -105,7 +105,7 @@ Varios:
 
 Objetos de texto:
 
-| Orden                | Selección                                                   |
+| Orden                | Selección                                                |
 | :------------------- | :------------------------------------------------------- |
 | `aw`, `iw`           | *A word*, *inner word*                                   |
 | `as`, `is`           | *A sentence*, *inner sentence*                           |
