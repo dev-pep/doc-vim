@@ -260,9 +260,13 @@ En cuanto a las teclas que se presionan juntamente con la tecla Control, la form
 
 Veamos un ejemplo con esta notación:
 
-`:inoremap \<C-b\> a\<C-b\>c`
+`:inoremap <C-b> a<C-b>c`
 
 En este caso, cada vez que tecleemos `C-b` en modo *Insertar*, se insertarán tres caracteres en el texto: 'a', '\<C-b\>' (se verá en pantalla como *\^B*) y 'c'.
+
+Es posible mapear un atajo de teclado a una acción nula (sin efecto):
+
+`:nnoremap <C-b> <Nop>`
 
 Hay que tener en cuenta también que en *Vim* existe la siguente equivalencia de teclas: `C-i` equivale al tabulador, `C-[` equivale a `Esc`, `C-m` equivale a `Intro` y `C-h` equivale a la tecla de retroceso. Pueden utilizarse indistintamente cualquiera de las dos formas.
 
