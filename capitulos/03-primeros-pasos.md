@@ -105,13 +105,14 @@ Existen varias órdenes que mueven el cursor de forma rápida. Muchas de estas a
 - `0` - principio de línea.
 - `^` - primer carácter no blanco de la línea. Por blancos entendemos espacios y tabuladores. Si son todos blancos, último carácter de la línea.
 - `$` - último carácter de la línea.
-- `w` - último carácter de la palabra actual, después del espacio posterior (secuencia de espacios, tabuladores y caracteres de fin de línea), es decir, principio de la palabra siguiente. `W` es similar, con la diferencia de que los símbolos de puntuación contiguos a la palabra se consideran también parte de la misma.
-- `e` - fin de la palabra actual. `E` es similar, con la diferencia de que los símbolos de puntuación contiguos se consideran también parte de la palabra.
-- `b` - principio de la palabra actual. `B` es similar, con la diferencia de que los símbolos de puntuación contiguos se consideran también parte de la palabra.
+- `w` - primer carácter de la palabra siguiente. `W` es similar, con la diferencia de que los símbolos de puntuación contiguos a la palabra se consideran también parte de la misma (solo los caracteres de espacio separan palabras).
+- `e` - fin de la palabra actual. `E` es similar, con la diferencia de que los símbolos de puntuación contiguos se consideran también parte de la palabra. Si estamos ya en el último carácter de la palabra correspondiente, saltará al último carácter de la palabra siguiente.
+- `b` - principio de la palabra actual. `B` es similar, con la diferencia de que los símbolos de puntuación contiguos se consideran también parte de la palabra. Si estamos ya en el primer carácter de la palabra actual, saltará al primer carácter de la palabra anterior.
 - `+` - primer carácter no blanco de la línea siguiente (si solo tiene caracteres en blanco, último carácter de esta). `-` hace lo mismo pero en la línea anterior.
 - `C-Fin` - se desplaza al último carácter de la última línea del archivo. Con argumento numérico, al último carácter de la línea especificada. Es similar a `G`, que no lo hace al último carácter de la línea, sino al primer carácter no blanco de la misma (si todos son blancos, se mueve al último de ellos).
 - `C-Inicio` - mueve el cursor al primer carácter no blanco de la primera línea del archivo (al último si solo hay blancos). Con argumento numérico, el destino es la línea especificada, no la última. Es equivalente a `gg`.
 - `%` con argumento numérico se desplaza a la linea cuyo porcentaje dentro del archivo corresponde al argumento.
+- `%` sin argumento numérico, funciona distinto. Si estamos sobre un carácter delimitador (llave, paréntesis, corchete,...) desplaza el cursor al otro carácter con el que está emparejado. Si no, avanza al carácter delimitador más próximo, aunque si no existe tal carácter en algún punto tras el cursor, en la línea actual, no hace nada.
 
 Las siguientes acciones actúan sobre las **líneas de pantalla**, que pueden no coincidir con las del archivo:
 
