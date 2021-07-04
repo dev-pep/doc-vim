@@ -19,40 +19,41 @@ Abreviaturas utilizadas:
 
 Movimiento del cursor:
 
-| Orden                | Acción                                                   |
-| :------------------- | :------------------------------------------------------- |
-| `h`, `j`, `k`, `l`   | Izquierda, abajo, arriba, derecha                        |
-| `<N>|`               | Número de columna                                        |
-| `0`, `^`             | Principio, primer blanco de línea                        |
-| `$`                  | Fin de línea                                             |
-| `w`, `W`             | Principio siguiente palabra (sin signos, con signos)     |
-| `e`, `E`             | Fin de palabra (sin signos, con signos)                  |
-| `b`, `B`             | Principio de palabra (sin signos, con signos)            |
-| `+`, `-`             | Primer no blanco de línea siguiente, anterior            |
-| `C-Fin`              | Último carácter de línea indicada (última por defecto)   |
-| `G`                  | Primer no blanco de línea indicada (última por defecto)  |
-| `C-Inicio`<br>`gg`   | Primer no blanco de línea indicada (primera por defecto) |
-| `(`, `)`             | Principio, final de frase                                |
-| `{`, `}`             | Principio, final de párrafo                              |
-| `gk`, `gj`           | Línea de pantalla arriba, abajo                          |
-| `g0`, `g^`           | Principio, primer blanco de línea de pantalla            |
-| `gm`                 | Centro (horizontal) de pantalla                          |
-| `g$`                 | Último carácter de línea de pantalla                     |
-| `C-f`, `C-b`         | Avanza, retrocede 1 pantalla                             |
-| `C-d`, `C-u`         | Avanza, retrocede 1/2 pantalla                           |
-| `C-e`, `C-y`         | Desplaza pantalla arriba, abajo                          |
-| `H`, `M`, `L`        | Arriba, centro, abajo (pantalla)                         |
-| `f<C>`, `F<C>`       | Búsqueda adelante, atrás                                 |
-| `t<C>`, `T<C>`       | Búsqueda *'til* adelante, atrás                          |
-| `;`, `,`             | Repetir búsqueda igual, al revés                         |
-| `n`, `N`             | Repetir búsqueda de patrón igual, al revés               |
-| `[[`, `]]`           | Retrocede, avanza por primeras líneas de secciones       |
-| `[]`, `][`           | Retrocede, avanza por últimas líneas de secciones        |
-| `[z`, `zj`           | Retrocede, avanza por primeras líneas de pliegues        |
-| `zk`, `]z`           | Retrocede, avanza por últimas líneas de pliegues         |
-| `%`                  | Desplazar al porcentaje indicado                         |
-| `` `<a>``, `` `<A>``     | Ir a una marca local, global                             |
-| `'<a>`, `'<A>`       | Ir a principio de línea que contenga marca local, global |
+| Orden                | Acción                                                         |
+| :------------------- | :------------------------------------------------------------- |
+| `h`, `j`, `k`, `l`   | Izquierda, abajo, arriba, derecha                              |
+| `<N>|`               | Número de columna                                              |
+| `0`, `^`             | Principio, primer blanco de línea                              |
+| `$`                  | Fin de línea                                                   |
+| `w`, `W`             | Principio siguiente palabra (sin signos, con signos)           |
+| `e`, `E`             | Fin de palabra actual o siguiente (sin signos, con signos)     |
+| `b`, `B`             | Principio de palabra actual o anterior(sin signos, con signos) |
+| `+`, `-`             | Primer no blanco de línea siguiente, anterior                  |
+| `C-Fin`              | Último carácter de línea indicada (última por defecto)         |
+| `G`                  | Primer no blanco de línea indicada (última por defecto)        |
+| `C-Inicio`<br>`gg`   | Primer no blanco de línea indicada (primera por defecto)       |
+| `(`, `)`             | Principio, final de frase                                      |
+| `{`, `}`             | Principio, final de párrafo                                    |
+| `gk`, `gj`           | Línea de pantalla arriba, abajo                                |
+| `g0`, `g^`           | Principio, primer blanco de línea de pantalla                  |
+| `gm`                 | Centro (horizontal) de pantalla                                |
+| `g$`                 | Último carácter de línea de pantalla                           |
+| `C-f`, `C-b`         | Avanza, retrocede 1 pantalla                                   |
+| `C-d`, `C-u`         | Avanza, retrocede 1/2 pantalla                                 |
+| `C-e`, `C-y`         | Desplaza pantalla arriba, abajo                                |
+| `H`, `M`, `L`        | Arriba, centro, abajo (pantalla)                               |
+| `f<C>`, `F<C>`       | Búsqueda adelante, atrás                                       |
+| `t<C>`, `T<C>`       | Búsqueda *'til* adelante, atrás                                |
+| `;`, `,`             | Repetir búsqueda igual, al revés                               |
+| `n`, `N`             | Repetir búsqueda de patrón igual, al revés                     |
+| `[[`, `]]`           | Retrocede, avanza por primeras líneas de secciones             |
+| `[]`, `][`           | Retrocede, avanza por últimas líneas de secciones              |
+| `[z`, `zj`           | Retrocede, avanza por primeras líneas de pliegues              |
+| `zk`, `]z`           | Retrocede, avanza por últimas líneas de pliegues               |
+| `<N>%`               | Desplazar al porcentaje indicado                               |
+| `%`                  | Desplazar al carácter delimitador correspondiente              |
+| `` `<a>``, `` `<A>`` | Ir a una marca local, global                                   |
+| `'<a>`, `'<A>`       | Ir a principio de línea que contenga marca local, global       |
 
 Cambio a modo *Insertar*:
 
