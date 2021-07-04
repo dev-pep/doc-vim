@@ -52,6 +52,7 @@ Movimiento del cursor:
 | `zk`, `]z`           | Retrocede, avanza por últimas líneas de pliegues               |
 | `<N>%`               | Desplazar al porcentaje indicado                               |
 | `%`                  | Desplazar al carácter delimitador correspondiente              |
+| `*`                  | Desplazar a la siguiente aparición de la palabra               |
 | `` `<a>``, `` `<A>`` | Ir a una marca local, global                                   |
 | `'<a>`, `'<A>`       | Ir a principio de línea que contenga marca local, global       |
 
