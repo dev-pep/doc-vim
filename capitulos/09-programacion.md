@@ -337,3 +337,7 @@ En el caso de un proyecto grande, podría ser necesario crear un *makefile* e in
 Para comprobar el funcionamiento de un programa, tanto si se trata de un archivo ejecutable como si es un *script* de código en un lenguaje interpretado, se puede invocar el mismo desde el modo *Comando* con el signo de exclamación. Nuevamente, podemos incluir esa invocación, sobre todo si es larga y lleva argumentos, en un atajo o macro.
 
 Si deseamos depurar (*debug*) el código, necesitaremos una herramienta externa para hacerlo, o instalar una extensión (*plugin*) en *Vim* que nos permita disponer de esa funcionalidad.
+
+## Acciones útiles
+
+Cuando en modo normal el cursor está sobre un número, mediante `C-a` se incrementa en 1 dicho número (ajustando adecuadamente sus cifras y signo). De forma similar, `C-x` decrementa el número.

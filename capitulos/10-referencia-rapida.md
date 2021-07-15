@@ -104,6 +104,8 @@ Varios:
 | `<<`, `>>`           | Aumentar, disminuir indentación de la línea actual       |
 | `=<mov>`             | Recalcular indentación de las líneas indicadas           |
 | `==`                 | Recalcular indentación de la línea actual                |
+| `C-a`                | Incrementa un número bajo el cursor                      |
+| `C-x`                | Decrementa un número bajo el cursor                      |
 
 Objetos de texto:
 
