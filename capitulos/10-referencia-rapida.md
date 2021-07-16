@@ -23,7 +23,7 @@ Movimiento del cursor:
 | :------------------- | :------------------------------------------------------------- |
 | `h`, `j`, `k`, `l`   | Izquierda, abajo, arriba, derecha                              |
 | `<N>|`               | Número de columna                                              |
-| `0`, `^`             | Principio, primer blanco de línea                              |
+| `0`, `^`             | Principio, primer no blanco de línea                           |
 | `$`                  | Fin de línea                                                   |
 | `w`, `W`             | Principio siguiente palabra (sin signos, con signos)           |
 | `e`, `E`             | Fin de palabra actual o siguiente (sin signos, con signos)     |
@@ -44,7 +44,7 @@ Movimiento del cursor:
 | `H`, `M`, `L`        | Arriba, centro, abajo (pantalla)                               |
 | `f<C>`, `F<C>`       | Búsqueda adelante, atrás                                       |
 | `t<C>`, `T<C>`       | Búsqueda *'til* adelante, atrás                                |
-| `;`, `,`             | Repetir búsqueda igual, al revés                               |
+| `;`, `,`             | Repetir búsqueda igual, al revés (línea actual)                |
 | `n`, `N`             | Repetir búsqueda de patrón igual, al revés                     |
 | `[[`, `]]`           | Retrocede, avanza por primeras líneas de secciones             |
 | `[]`, `][`           | Retrocede, avanza por últimas líneas de secciones              |
@@ -53,6 +53,7 @@ Movimiento del cursor:
 | `<N>%`               | Desplazar al porcentaje indicado                               |
 | `%`                  | Desplazar al carácter delimitador correspondiente              |
 | `*`                  | Desplazar a la siguiente aparición de la palabra               |
+| `m<a>`               | Crear una marca de texto                                       |
 | `` `<a>``, `` `<A>`` | Ir a una marca local, global                                   |
 | `'<a>`, `'<A>`       | Ir a principio de línea que contenga marca local, global       |
 
