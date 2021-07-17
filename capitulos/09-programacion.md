@@ -340,4 +340,4 @@ Si deseamos depurar (*debug*) el código, necesitaremos una herramienta externa 
 
 ## Acciones útiles
 
-Cuando en modo normal el cursor está sobre un número, mediante `C-a` se incrementa en 1 dicho número (ajustando adecuadamente sus cifras y signo). De forma similar, `C-x` decrementa el número.
+Cuando en modo normal el cursor está sobre un número, mediante `C-a` se incrementa en 1 dicho número (ajustando adecuadamente sus cifras y signo). De forma similar, `C-x` decrementa el número. Esto también funciona en identificadores con un sufijo numérico.
