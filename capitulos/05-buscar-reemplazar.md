@@ -40,6 +40,11 @@ Las búsquedas tienen su propio historial, al que puede accederse con las flecha
 
 Si queremos buscar solo palabras completas, debemos incluir los espacios pertinentes (o signos de puntuación deseados) en el patrón.
 
+Existen dos acciones especiales que pueden usarse desde modo *Normal*:
+
+- `*` realiza una búsqueda (como si usáramos `/`) de la palabra sobre la que se halla el cursor y lo desplaza adecuadamente si la encuentra. Presionar esta tecla repetidamente desplaza el cursor cíclicamente a través de todas las apariciones de la palabra.
+- `#` hace lo mismo pero hacia atrás (como en la búsqueda con `?`).
+
 Dado que estas acciones de búsqueda son, en realidad, comandos de desplazamiento del cursor, pueden combinarse con las acciones `d` (*delete*), `c` (*change*) o `y` (*yank*). Por ejemplo, la acción `d?la` seguida de `Intro` borrará el texto existente entre la posición actual del cursor y la anterior coincidencia del texto \'la\'. Se pueden sofisticar estos borrados o copiados utilizando argumento numérico.
 
 ## Reemplazar (substitute)

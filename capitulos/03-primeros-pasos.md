@@ -113,7 +113,6 @@ Existen varias órdenes que mueven el cursor de forma rápida. Muchas de estas a
 - `C-Inicio` - mueve el cursor al primer carácter no blanco de la primera línea del archivo (al último si solo hay blancos). Con argumento numérico, el destino es la línea especificada, no la última. Es equivalente a `gg`.
 - `%` con argumento numérico se desplaza a la linea cuyo porcentaje dentro del archivo corresponde al argumento.
 - `%` sin argumento numérico, funciona distinto. Si estamos sobre un carácter delimitador (llave, paréntesis, corchete,...) desplaza el cursor al otro carácter con el que está emparejado. Si no, avanza al carácter delimitador más próximo, aunque si no existe tal carácter en algún punto tras el cursor, en la línea actual, no hace nada.
-- `*` desplaza el cursor a otras apariciones de la palabra sobre la que está dicho cursor (si las hay), a través del mecanismo de búsqueda. Presionar esta tecla repetidamente desplaza el cursor cíclicamente a través de todas las apariciones de la palabra.
 
 Las siguientes acciones actúan sobre las **líneas de pantalla**, que pueden no coincidir con las del archivo:
 
