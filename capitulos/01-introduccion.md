@@ -8,13 +8,9 @@ En 2006 fue votado como el editor más popular entre los lectores de la ya desap
 
 *Vim* puede utilizarse de forma idéntica al original *vi*, activando el llamado modo compatible. Sin embargo, con este desactivado (por defecto), *Vim* ofrece muchas mejoras respecto del editor clásico.
 
-## Nivel del libro
+Los apuntes empiezan siguiendo el tutorial oficial del editor, que abarca los aspectos más utilizados. Seguidamente, los sucesivos capítulos van cubriendo los distintos aspectos del editor por separado y con más profundidad.
 
-Este libro empieza desde cero, por lo que está especialmente indicado para todos aquellos que no tengan ningún tipo de experiencia con el editor.
-
-El libro empieza siguiendo el tutorial oficial del editor, que abarca los aspectos más utilizados. Seguidamente, las lecciones van cubriendo los distintos aspectos del editor por separado y con más profundidad.
-
-A continuación se irá avanzando hasta un nivel en el que pueda usarse *Vim* de forma eficiente, y resulte sencillo profundizar en cualquier aspecto de su manejo, utilizando los numerosos recursos de ayuda disponibles, incluyendo el manual incorporado en el propio programa, o los múltiples sitios existentes en la red, especialmente el sitio oficial de *Vim* (<https://www.vim.org>).
+La idea es ir avanzando hasta un nivel en el que pueda usarse *Vim* de forma eficiente, y resulte sencillo profundizar en cualquier aspecto de su manejo, utilizando los numerosos recursos de ayuda disponibles, incluyendo el manual incorporado en el propio programa, o los múltiples sitios existentes en la red, especialmente el sitio oficial de *Vim* (<https://www.vim.org>).
 
 ## Obtener Vim
 
