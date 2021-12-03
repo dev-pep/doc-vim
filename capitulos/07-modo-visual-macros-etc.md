@@ -18,6 +18,8 @@ Mientras podamos ver el texto resaltado, permaneceremos en modo *Visual*. Hay do
 
 Por ejemplo, estando en modo *Visual*, con el texto resaltado, podemos realizar cualquiera de las acciones de *yank*, *change* o *delete*, para posteriormente hacer un *put* del texto pertinente. Pero también se pueden realizar otras operaciones con el texto resaltado, como por ejemplo cambiar el estado de mayúscula o minúscula del texto seleccionado mediante `~`. Una vez realizada la operación correspondiente, el editor vuelve automáticamente al modo *Normal*.
 
+Existe un modo de escribir en varias líneas al mismo tiempo. Para ello, se debe entrar en modo *Bloque Visual* (`C-v`) y seleccionar un bloque. Estando en ese estado, al presionar `I` se entra en modo *Insertar*. Entonces se debe insertar **una línea** de texto, y salir de modo *Insertar* con `Esc`. Esto saldrá de modo *Bloque Visual* también, y replicará la línea insertada en cada línea del bloque, a partir de la columna en la que empieza el bloque. Si en lugar de una sola línea introducimos un texto de varias líneas, el texto será añadido únicamente en la primera línea del bloque.
+
 ## Objetos de texto
 
 *Vim* ofrece la posibilidad de definir, de forma sencilla, unas entidades de fácil identificación llamadas «objetos de texto». Se trata de fragmentos de texto con un significado especial según los caracteres que los delimitan. Así, podemos hablar de palabras, frases, párrafos o áreas de texto delimitadas por:

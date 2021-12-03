@@ -92,6 +92,7 @@ Varios:
 | `v`                  | Modo *Visual*                                            |
 | `V`                  | Modo *Línea Visual*                                      |
 | `C-v`                | Modo *Bloque Visual*                                     |
+| `C-v I`              | Modo *Insertar* dentro de modo *Bloque Visual*           |
 | `q<R>`               | Grabar macro                                             |
 | `q`                  | Fin grabación macro                                      |
 | `@<R>`               | Ejecutar macro                                           |
