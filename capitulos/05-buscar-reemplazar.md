@@ -75,7 +75,7 @@ reemplaza en todo el archivo, e irá solicitando confirmación para cada caso.
 
 También se pueden incluir las letras `i`, para que ignore siempre mayúsculas y minúsculas, o `I`, para que no las ignore nunca. Estas indicaciones tienen prioridad sobre el estado de la opción `ignorecase`.
 
-Hemos visto que se puede reemplazar definiendo un rango de líneas. Existe otra forma de definir un subconjunto de líneas del archivo. En lugar de definir las líneas que componen un rango consecutivo, podemos elegir las que contengan un patrón determinado. Para encontrar dichas líneas utilizaremos la forma `:g/\<patrón\>`. Por ejemplo, si introducimos:
+Hemos visto que se puede reemplazar definiendo un rango de líneas. Existe otra forma de definir un subconjunto de líneas del archivo. En lugar de definir las líneas que componen un rango consecutivo, podemos elegir las que contengan un patrón determinado. Para encontrar dichas líneas utilizaremos la forma `:g/<patrón>`. Por ejemplo, si introducimos:
 
 `:g/los`
 
