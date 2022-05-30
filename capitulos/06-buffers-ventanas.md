@@ -14,7 +14,7 @@ En el caso de usar `:e` especificando un nombre de archivo que no existe en el d
 
 Los *buffers* son *activos* si están asociados a alguna de las ventanas existentes. De lo contrario, son *buffers* ocultos, o simples referencias a archivos en disco.
 
-Para ver la *lista de buffers* que *Vim* guarda en memoria, usaremos el comando `:ls` (o `:files`, o `:buffers`, que son comandos sinónimos). Esto nos mostrará dicha lista, con el número de cada uno, y algunas indicaciones: la letra \'a\' indica *buffer* activo. Si está oculto (no lo muestra ninguna ventana actualmente), tendrá la letra \'h\' (*hidden*) en su lugar. Si no existe letra, significa que no está en memoria, es decir, es una simple referencia a un archivo en disco. Por otro lado, el símbolo \'%\' indica que es el *buffer* de la ventana actual. Se le podría denominar el «*buffer* actual». El símbolo \'\#\' indica *buffer* alternativo, que normalmente coincide con el anterior *buffer* actual (el que tenía el símbolo \'%\' antes que el actual). El símbolo \'+\' indica que existen cambios en el *buffer* sin guardar en disco.
+Para ver la *lista de buffers* que *Vim* guarda en memoria, usaremos el comando `:ls` (o `:files`, o `:buffers`, que son comandos sinónimos). Esto nos mostrará dicha lista, con el número de cada uno, y algunas indicaciones: la letra 'a' indica *buffer* activo. Si está oculto (no lo muestra ninguna ventana actualmente), tendrá la letra 'h' (*hidden*) en su lugar. Si no existe letra, significa que no está en memoria, es decir, es una simple referencia a un archivo en disco. Por otro lado, el símbolo '%' indica que es el *buffer* de la ventana actual. Se le podría denominar el «*buffer* actual». El símbolo '\#' indica *buffer* alternativo, que normalmente coincide con el anterior *buffer* actual (el que tenía el símbolo '%' antes que el actual). El símbolo '+' indica que existen cambios en el *buffer* sin guardar en disco.
 
 El concepto de *buffer* alternativo es útil para alternar el contenido de una ventana continuamente entre dos *buffers*. Es rápido pasar al *buffer* alternativo con
 
@@ -74,9 +74,9 @@ o mediante `C-w v`.
 
 Si al hacer la subdivisión especificamos el nombre de un archivo, la nueva ventana mostrará dicho archivo. Si este se corresponde con uno de los *buffers* existentes, la nueva ventana se asociará a ese *buffer*. De lo contrario, se creará un nuevo *buffer* para ese archivo, asociado a la nueva ventana. Todo esto se aplica tanto a subdivisiones horizontales como verticales:
 
-`:split \<archivo\>`
+`:split <archivo>`
 
-`:vsplit \<archivo\>`
+`:vsplit <archivo>`
 
 Si lo que queremos es que la nueva ventana muestre un archivo nuevo (vacío y sin guardar en disco), lo haremos entrando
 
@@ -143,9 +143,9 @@ Existe una serie de acciones que permiten aumentar o disminuir el ancho o alto d
 
 `C-w -` disminuye la altura una fila.
 
-`C-w \<` disminuye la anchura una columna.
+`C-w <` disminuye la anchura una columna.
 
-`C-w \>` aumenta la anchura una columna.
+`C-w >` aumenta la anchura una columna.
 
 Especificando argumento numérico, la variación de tamaño no será uno, sino lo que indiquemos.
 
@@ -155,9 +155,9 @@ Las pestañas (*tabs*) son disposiciones (*layouts*) de ventanas en pantalla. Pu
 
 El comando `:tabnew` abre una nueva pestaña que contiene una sola ventana con un archivo nuevo. Si queremos que la pestaña nueva tenga un archivo abierto, debemos especificar el nombre del archivo al abrirla:
 
-`:tabnew \<archivo\>`
+`:tabnew <archivo>`
 
-Cuando existen múltiples pestañas, podemos ver la lista de las mismas arriba del todo de la pantalla. La pestaña que aparece resaltada es la actual. En esa línea indicadora de pestañas, podemos ver el nombre del archivo activo de cada pestaña. En su caso podremos ver también el signo \'+\' si alguna de las ventanas que contiene tiene cambios sin guardar en disco. También puede verse el número de ventanas que tiene cada pestaña, en caso de contener más de una.
+Cuando existen múltiples pestañas, podemos ver la lista de las mismas arriba del todo de la pantalla. La pestaña que aparece resaltada es la actual. En esa línea indicadora de pestañas, podemos ver el nombre del archivo activo de cada pestaña. En su caso podremos ver también el signo '+' si alguna de las ventanas que contiene tiene cambios sin guardar en disco. También puede verse el número de ventanas que tiene cada pestaña, en caso de contener más de una.
 
 Para cerrar la pestaña actual, teclearemos
 

@@ -146,7 +146,7 @@ De este modo podemos ver qué secuencias están libres o, si decidimos cambiar a
 
 Es posible comprobar el uso por defecto de una pulsación concreta. Por ejemplo, si queremos ver el uso de `C-v` dentro del modo *Insertar*, teclearemos
 
-`:h i\_CTRL-V`
+`:h i_CTRL-V`
 
 Aquí podemos usar el prefijo 'i' (modo *Insertar*), 'c' (modo *Comando* o búsqueda de patrones), 'v' (modo *Visual*) o sin prefijo ni guión bajo (modo *Normal*).
 
@@ -276,7 +276,7 @@ En el apartado sobre macros vimos dos formas de definirlas: mediante `@` en modo
 
 A este comando hay que pasarle por parámetro la letra correspondiente al registro que deseamos cambiar, precedida por '@'; seguidamente un signo '=' y el texto que debe almacenarse en el registro, entre comillas simples. Por ejemplo:
 
-`:let \@s='eaPepe'`
+`:let @s='eaPepe'`
 
 define el contenido del registro 's', que en este caso es una macro que quedará, lógicamente, asociada al registro 's'. La macro inserta el texto 'Pepe' al final de la palabra actual, terminando en modo *Insertar*.
 

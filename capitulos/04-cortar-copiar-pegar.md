@@ -169,7 +169,7 @@ cambia la línea actual. Debemos introducir el nuevo texto (terminado siempre en
 
 copia (*yank*) la línea actual.
 
-`:.,\$d`
+`:.,$d`
 
 elimina todas las líneas desde la actual hasta la última del archivo.
 

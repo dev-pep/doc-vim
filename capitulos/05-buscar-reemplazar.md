@@ -45,7 +45,7 @@ Existen dos acciones especiales que pueden usarse desde modo *Normal*:
 - `*` realiza una búsqueda (como si usáramos `/`) de la palabra sobre la que se halla el cursor y lo desplaza adecuadamente si la encuentra. Presionar esta tecla repetidamente desplaza el cursor cíclicamente a través de todas las apariciones de la palabra.
 - `#` hace lo mismo pero hacia atrás (como en la búsqueda con `?`).
 
-Dado que estas acciones de búsqueda son, en realidad, comandos de desplazamiento del cursor, pueden combinarse con las acciones `d` (*delete*), `c` (*change*) o `y` (*yank*). Por ejemplo, la acción `d?la` seguida de `Intro` borrará el texto existente entre la posición actual del cursor y la anterior coincidencia del texto \'la\'. Se pueden sofisticar estos borrados o copiados utilizando argumento numérico.
+Dado que estas acciones de búsqueda son, en realidad, comandos de desplazamiento del cursor, pueden combinarse con las acciones `d` (*delete*), `c` (*change*) o `y` (*yank*). Por ejemplo, la acción `d?la` seguida de `Intro` borrará el texto existente entre la posición actual del cursor y la anterior coincidencia del texto 'la'. Se pueden sofisticar estos borrados o copiados utilizando argumento numérico.
 
 ## Reemplazar (substitute)
 
@@ -125,7 +125,7 @@ En primer lugar tenemos el carácter especial asterisco (`*`), que nos marca la 
 
 `/Hola*\.`
 
-busca la secuencia 'Hol', seguida de cero o más caracteres \'a\' tras los cuales hay un punto. Así, son posibles coincidencias 'Hol.', 'Hola.', o 'Holaaaa.', pero no lo son 'hola.' ni 'Holas.'.
+busca la secuencia 'Hol', seguida de cero o más caracteres 'a' tras los cuales hay un punto. Así, son posibles coincidencias 'Hol.', 'Hola.', o 'Holaaaa.', pero no lo son 'hola.' ni 'Holas.'.
 
 La secuencia `\+` corresponde a la *búsqueda codiciosa de 1 o más caracteres*. Veamos un ejemplo:
 
