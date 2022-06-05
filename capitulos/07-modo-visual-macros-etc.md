@@ -69,11 +69,11 @@ En cuanto al uso de objetos de texto en modo *Normal*, debe hacerse en conjunci�
 
 Es frecuente repetir numerosas veces las mismas secuencias de operaciones, de forma rutinaria. En estos casos resultan muy útiles las macros. Se trata de la definición de macroinstrucciones que agrupan un número más o menos grande de instrucciones o secuencias de operaciones que pueden ser reproducidas posteriormente como una sola operación.
 
-El proceso de grabación de una macro es muy simple. Asumimos que empezamos la grabación en modo *Normal*. Hay que tener en cuenta que la macro *se almacenará en el registro de texto que indiquemos*. Se deben realizar los siguientes pasos:
+El proceso de grabación de una macro es muy simple. Empezamos la grabación en modo *Normal*. Hay que tener en cuenta que la macro *se almacenará en el registro de texto que indiquemos*. Se deben realizar los siguientes pasos:
 
-- Pulsar `q` y a continuación la letra correspondiente al registro al que deseamos asociar esa macro.
+- Pulsar `q` (en modo *Normal*) y a continuación la letra correspondiente al registro al que deseamos asociar esa macro.
 - Realizar todas las operaciones que deseamos registrar.
-- Pulsar nuevamente `q`.
+- En modo *Normal*, pulsar nuevamente `q`.
 
 Para invocar posteriormente esa macro, simplemente debemos pulsar, desde modo *Normal*, `@` y a continuación la letra correspondiente al registro donde hayamos almacenado la macro.
 
