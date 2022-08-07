@@ -21,11 +21,15 @@ Existe otro modo, llamado *Visual*, que se verá más adelante en el libro.
 
 Para ejecutar *Vim*, debemos introducir lo siguiente desde la línea de comandos:
 
-`vim`
+```
+vim
+```
 
 o
 
-`vim <archivo>`
+```
+vim <archivo>
+```
 
 donde '\<archivo\>' es un nombre de archivo opcional, que se abrirá automáticamente si existe. Si no se especifica, *Vim* se inicia con un archivo vacío sin nombre. Si se especifica un nombre pero el archivo no existe, se iniciará con un archivo vacío con ese nombre, y no será creado en disco hasta que se guarde explícitamente.
 
@@ -33,33 +37,47 @@ Podemos observar el símbolo `~` en aquellas líneas donde no hay texto (en el a
 
 Por otro lado, cuando la línea es demasiado grande para encajar dentro de la anchura de la pantalla (o ventana), la línea del archivo (llamada línea física) ocupa varias líneas de pantalla. Sin embargo, si no existen suficientes líneas de pantalla para mostrar la línea física completa, *Vim* no la muestra; solo aparecen símbolos ***@*** en el margen izquierdo, en las líneas de pantalla donde debería aparecer la línea física. En cambio, si la opción `display` tiene el valor `truncate`, entonces se mostrará esa línea hasta donde pueda, exceptuando la última línea de pantalla, que mostrará solo ***@@@***. Para activar esa opción, teclearemos
 
-`:set display=truncate`
+```
+:set display=truncate
+```
 
 seguido de `Intro`, dado que estamos en modo comando.
 
 Para salir de *Vim*, utilizaremos el comando
 
-`:q`
+```
+:q
+```
 
 Sin embargo, si existen cambios sin guardar, no nos permitirá salir. En ese caso, tendremos dos opciones. Una es guardar lo cambios mediante
 
-`:w`
+```
+:w
+```
 
 y salir posteriormente tecleando
 
-`:q`
+```
+:q
+```
 
 Estas dos acciones se pueden combinar en una sola:
 
-`:wq`
+```
+:wq
+```
 
 La otra forma es salir descartando los cambios mediante
 
-`:q!`
+```
+:q!
+```
 
 Si queremos guardar el archivo actual con otro nombre, teclearemos
 
-`:w <archivo>`
+```
+:w <archivo>
+```
 
 donde \<archivo\> es el nuevo nombre, que puede ser un simple nombre, o incluir una ruta (relativa o absoluta). Hay que tener en cuenta que el directorio actual es el directorio desde el que ejecutamos *Vim*, a no ser que lo cambiemos posteriormente (lo cual podemos hacer con el comando `:cd`).
 
@@ -67,27 +85,37 @@ Si el texto que estamos editando no tiene todavía nombre de archivo, debemos es
 
 Si intentamos guardar con un nombre de archivo que ya existe, no se ejecutará la acción de guardado. En ese caso, si queremos sobreescribir el archivo, debemos utilizar
 
-`:w! <archivo>`
+```
+:w! <archivo>
+```
 
 Por otro lado, para abrir un archivo, utilizaremos el comando
 
-`:e <archivo>`
+```
+:e <archivo>
+```
 
 En este caso, si el archivo actual tiene cambios no guardados, no se abrirá el nuevo, a no ser que le indiquemos que descarte esos cambios:
 
-`:e! <archivo>`
+```
+:e! <archivo>
+```
 
 Si el archivo especificado no existe, se abrirá un archivo vacío con ese nombre. Para que dicho archivo sea creado en disco se deberá guardar con `:w`.
 
 Si queremos revertir el archivo actual a la versión guardada en disco, perdiendo los cambios recientes, teclearemos
 
-`:e!`
+```
+:e!
+```
 
 Si no incluimos el símbolo `!`, solo cargará esa versión guardada cuando no hayamos realizado cambios en relación a esta desde el editor. En este caso, esto solo tendría algún efecto si se hubiese realizado algún cambio en el archivo desde una aplicación externa (que podría ser otra instancia de *Vim*).
 
 Para insertar el contenido de un archivo después de la línea actual:
 
-`:r <archivo>`
+```
+:r <archivo>
+```
 
 ## Movimientos del cursor
 
@@ -96,7 +124,9 @@ vacía (sin ningún carácter), en cuyo caso el cursor estará al principio de l
 
 Al movernos verticalmente cambiando de línea, el número de columna del cursor cambiará cuando pasemos por líneas con menos caracteres que el número de columna actual. En ese caso, *Vim* intentará en todo momento acercarse lo más posible a esa columna, que cambiará de valor solo cuando realicemos un desplazamiento horizontal explícito. Para definir la columna del cursor, podemos teclear:
 
-`<número>|`
+```
+<número>|
+```
 
 Al hablar de líneas, nos referimos a líneas de archivo, que no tienen por qué coincidir con las líneas en pantalla. Cuando la línea del archivo ocupa más que el ancho de pantalla, *Vim* la divide en dos o más líneas de pantalla, dependiendo de su longitud, como ya se ha dicho anteriormente. En ese caso, el número de columna dentro de la línea podría no coincidir con la columna de pantalla en caso de líneas con anchura superior a la anchura de pantalla.
 
@@ -195,11 +225,15 @@ La orden `~` cambia el estado de mayúsculas del carácter actual (si está en m
 
 Se puede ejecutar un comando del sistema operativo mediante
 
-`:!<comando>`
+```
+:!<comando>
+```
 
 Para insertar la salida de un comando del sistema después de la línea actual:
 
-`:r !<comando>`
+```
+:r !<comando>
+```
 
 Resulta útil el mecanismo de autocompletado que podemos usar en modo *Comando* mediante la tecla `Tab`, el cual tiene en cuenta el contexto de lo que estamos tecleando.
 

@@ -20,7 +20,9 @@ El efecto del argumento numérico es el de repetir la acción de búsqueda tanta
 
 Podemos buscar cualquier patrón de texto utilizando la acción
 
-`/<patrón>`
+```
+/<patrón>
+```
 
 Donde \<patrón\> es el texto a buscar. La acción debe terminarse con un `Intro`. Esto buscará el patrón dentro del archivo entero. La búsqueda se efectúa hacia adelante, y se inicia en la posición del cursor. Si no se encuentra ninguna coincidencia antes del fin de archivo, continúa buscando desde el principio.
 
@@ -30,7 +32,9 @@ Una vez encontrada una coincidencia, la acción `n` repite la búsqueda. Mediant
 
 La búsqueda del tipo
 
-`?<patrón>`
+```
+?<patrón>
+```
 
 es similar a la anterior, con la diferencia de que se trata de una búsqueda hacia atrás. Si llega al principio del archivo, sigue buscando por el final. En este caso, la acción `n` también repite hacia atrás, mientras que `N` lo hace hacia adelante.
 
@@ -51,7 +55,9 @@ Dado que estas acciones de búsqueda son, en realidad, comandos de desplazamient
 
 Se puede reemplazar un patrón de texto por otro de forma automática utilizado el comando *substitute* (`s`) del modo *Comando*.
 
-`:s/<viejo>/<nuevo>`
+```
+:s/<viejo>/<nuevo>
+```
 
 reemplaza el patrón \<viejo\>, en caso de existir, por el \<nuevo\>. En este caso, solo realizará un reemplazo, en la siguiente coincidencia después de la posición del cursor, y antes del fin de línea.
 
@@ -59,17 +65,23 @@ Si queremos que el comando afecte a otras líneas, se puede anteponer un rango d
 
 Si lo que deseamos es que no se limite a un solo reemplazo por línea, debemos añadir `/g` al final del comando:
 
-`:s/<viejo>/<nuevo>/g`
+```
+:s/<viejo>/<nuevo>/g
+```
 
 reemplaza todas las coincidencias en la línea actual.
 
-`:10,20s/<viejo>/<nuevo>/g`
+```
+:10,20s/<viejo>/<nuevo>/g
+```
 
 reemplaza todas las ocurrencias en el rango comprendido entre las líneas 10 y 20, ambas inclusive.
 
 Si añadimos `c`, *Vim* además pedirá confirmación en cada reemplazo:
 
-`:%s/<viejo>/<nuevo>/gc`
+```
+:%s/<viejo>/<nuevo>/gc
+```
 
 reemplaza en todo el archivo, e irá solicitando confirmación para cada caso.
 
@@ -77,27 +89,37 @@ También se pueden incluir las letras `i`, para que ignore siempre mayúsculas y
 
 Hemos visto que se puede reemplazar definiendo un rango de líneas. Existe otra forma de definir un subconjunto de líneas del archivo. En lugar de definir las líneas que componen un rango consecutivo, podemos elegir las que contengan un patrón determinado. Para encontrar dichas líneas utilizaremos la forma `:g/<patrón>`. Por ejemplo, si introducimos:
 
-`:g/los`
+```
+:g/los
+```
 
 podremos ver en pantalla el subconjunto de líneas que contienen el patrón de texto 'los'.
 
 Esta es la forma de definir este tipo de subconjuntos de líneas. Ahora podemos incorporarlo a nuestras acciones de reemplazo:
 
-`:g/<patrón>/s/<viejo>/<nuevo>/g`
+```
+:g/<patrón>/s/<viejo>/<nuevo>/g
+```
 
 En todas las líneas que contengan el patrón definido por \<patrón\>, sustituiremos todas la ocurrencias del texto definido en \<viejo\> por el texto especificado en \<nuevo\>; si no añadimos la 'g' final, solo reemplazará la primera ocurrencia (en caso de haberla) de cada línea.
 
 Si lo que queremos sustituir es el patrón de selección por el nuevo texto, no hace falta que tecleemos
 
-`:g/<patrón>/s/<patrón>/<nuevo>/g`
+```
+:g/<patrón>/s/<patrón>/<nuevo>/g
+```
 
 sino que es suficiente teclear
 
-`:g/<patrón>/s//<nuevo>/g`
+```
+:g/<patrón>/s//<nuevo>/g
+```
 
 Aunque en este caso no haría falta usar el comando de selección `g`, ya que se podría aplicar el reemplazo en todo el archivo, con el mismo resultado:
 
-`:%s/<patrón>/<nuevo>/g`
+```
+:%s/<patrón>/<nuevo>/g
+```
 
 ## Expresiones regulares
 
@@ -109,7 +131,9 @@ A la hora de buscar, podemos encontrarnos que algunos caracteres no se comportan
 
 Si queremos que un carácter con significado especial pierda ese significado, hay que incluir el carácter de *escape* (la barra invertida `\`) inmediatamente antes:
 
-`/\.`
+```
+/\.
+```
 
 desplaza el cursor hasta el siguiente punto.
 
@@ -123,31 +147,41 @@ Para buscar una secuencia de texto que puede estar repetida varias veces, usarem
 
 En primer lugar tenemos el carácter especial asterisco (`*`), que nos marca la **búsqueda codiciosa (*greedy*)** de 0 o más caracteres. Codiciosa significa que intentará hacer coincidir tantos caracteres como le sea posible. Más adelante veremos algún ejemplo de coincidencias codiciosas y no codiciosas.
 
-`/Hola*\.`
+```
+/Hola*\.
+```
 
 busca la secuencia 'Hol', seguida de cero o más caracteres 'a' tras los cuales hay un punto. Así, son posibles coincidencias 'Hol.', 'Hola.', o 'Holaaaa.', pero no lo son 'hola.' ni 'Holas.'.
 
 La secuencia `\+` corresponde a la *búsqueda codiciosa de 1 o más caracteres*. Veamos un ejemplo:
 
-`/Hola\+\.`
+```
+/Hola\+\.
+```
 
 En este caso, son posibles coincidencias 'Hola.', o 'Holaaaa.', pero no lo son 'Hol.', 'hola.' ni 'Holas.'.
 
 `\?` indica *0 o 1 coincidencias*, es decir, un elemento opcional:
 
-`/Hola\?\.`
+```
+/Hola\?\.
+```
 
 solo tiene dos coincidencias: 'Hol.' y 'Hola'.
 
 Puede buscarse un número concreto de repeticiones mediante `\{<N>}`, donde \<N\> es el número de repeticiones deseadas:
 
-`/Hola\{10}\.`
+```
+/Hola\{10}\.
+```
 
 tiene una única coincidencia posible: 'Holaaaaaaaaaa.'.
 
 En lugar de un número, podemos buscar un *número de repeticiones dentro de un rango*, usando `\{<min>,<max>}`, donde \<min\> y \<max\> son respectivamente los números mínimo y máximo de repeticiones deseadas, ambos incluidos. *Vim* intentará hacer coincidir la mayor parte de caracteres posible (búsqueda codiciosa).
 
-`/Hola\{3,5}\.`
+```
+/Hola\{3,5}\.
+```
 
 tiene 3 coincidencias posibles: 'Holaaa.', 'Holaaaa.', y 'Holaaaaa.'.
 
@@ -159,7 +193,9 @@ En la definición de rangos, se puede omitir el número mínimo, el máximo, o a
 
 Los corchetes no tienen significado especial, a no ser que delimiten un conjunto de caracteres, dado que en ese caso, ese conjunto de caracteres entre corchetes (`[]`) coincidirá con un solo carácter del texto que sea igual a alguno de los caracteres especificados. Por ejemplo:
 
-`/H[aeu]llo!`
+```
+/H[aeu]llo!
+```
 
 tiene 3 posibles coincidencias: 'Hallo!', 'Hello!' y 'Hullo!'.
 
@@ -201,11 +237,15 @@ Veamos ahora un ejemplo de búsqueda codiciosa en contraposición a una búsqued
 
 Una búsqueda codiciosa:
 
-`/.*[=+]`
+```
+/.*[=+]
+```
 
 coincidirá con 'Panqueque=leche+huevos+harina+sal+', es decir, el mayor conjunto posible de caracteres terminado en '+' o '=' (en este caso, '+'). En cambio la misma búsqueda, pero en su variante no codiciosa:
 
-`/.{-}[=+]`
+```
+/.{-}[=+]
+```
 
 coincidirá únicamente con 'Panqueque=', es decir, el menor conjunto posible de caracteres terminado en '+' o '=' (ahora '='). En este caso, podríamos repetir la búsqueda, que daría una nueva coincidencia: 'leche+'. En total encontraríamos hasta 5 coincidencias, mientras que en el caso de la búsqueda codiciosa solo se produciría una coincidencia.
 
@@ -221,13 +261,17 @@ En cualquier punto de la expresión se puede incluir un modificador, que afectar
 
 En el caso del modificador `\v`, a partir de su aparición, los cuantificadores deben introducirse sin carácter de escape, así como los caracteres de agrupación (paréntesis), principio y final de palabra (`<`, `>`) o patrones alternativos (`|`). Si utilizamos el carácter de escape, estamos indicando una referencia a dicho carácter:
 
-`/\vhand(y|ful)`
+```
+/\vhand(y|ful)
+```
 
 coincidiría tanto con 'handy' como con 'handful'.
 
 Mediante el modificador `\V`, los caracteres `^`, `*`, `.` y `$` pierden su significado especial, pasando a representar el carácter en sí. Si utilizamos este modificador y necesitamos utilizar el significado especial de alguno de estos caracteres, podemos utilizarlos precedidos del carácter de escape.
 
-`/\V^.*$`
+```
+/\V^.*$
+```
 
 coincide con el patrón exacto '^.*$'.
 
@@ -237,6 +281,8 @@ El modificador `\c` indica que la búsqueda debe hacerse sin tener en cuenta may
 
 Veamos un ejemplo:
 
-`:%s/\v(\a+)/\u\1/g`
+```
+:%s/\v(\a+)/\u\1/g
+```
 
 pone en mayúscula la primera letra de cada palabra del archivo.

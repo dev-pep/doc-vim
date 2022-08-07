@@ -127,8 +127,7 @@ Mediante `:s/<viejo>/<nuevo>/g` sustituimos la siguiente ocurrencia del texto \<
 
 Si queremos que la sustitución se produzca solo en la línea actual, el formato es `:s/<viejo>/<nuevo>` (sin la \'g\', que denota «global»).
 
-Si queremos restringir la sustitución a un fragmento del fichero entre las líneas \<L1\> y \<L2\>, el formato es
-`:<L1>,<L2>s/<viejo>/<nuevo>/g`
+Si queremos restringir la sustitución a un fragmento del fichero entre las líneas \<L1\> y \<L2\>, el formato es `:<L1>,<L2>s/<viejo>/<nuevo>/g`
 
 Para cambiar todas las ocurrencias del texto en todo el fichero a la vez, se usa `:%s/<viejo>/<nuevo>/g`
 
@@ -144,13 +143,17 @@ En este último caso, si queremos que nos solicite confirmación para cada ocurr
 
 Si queremos guardar el fichero con un nombre concreto, teclearemos:
 
-`:w <nombre>`
+```
+:w <nombre>
+```
 
 ### Lección 5.3 - Un mandato de escritura selectivo
 
 Para guardar en un archivo únicamente el fragmento comprendido entre las líneas \<L1\> y \<L2\> (ambas inclusive), teclearemos:
 
-`:<L1>,<L2> w <nombre>`
+```
+:<L1>,<L2> w <nombre>
+```
 
 ### Lección 5.4 - Recuperando y mezclando ficheros
 
@@ -191,7 +194,9 @@ Para desactivar una opción, añadiremos el prefijo \'no\' en la misma (por ejem
 
 Se puede incluir más de una opción en el mismo comando `:set`. Por ejemplo, podríamos introducir
 
-`:set ic nois hls`
+```
+:set ic nois hls
+```
 
 para activar `ic` y `hls`, al tiempo que desactivamos `is`.
 

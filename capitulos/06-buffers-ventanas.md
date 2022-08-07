@@ -18,7 +18,9 @@ Para ver la *lista de buffers* que *Vim* guarda en memoria, usaremos el comando 
 
 El concepto de *buffer* alternativo es útil para alternar el contenido de una ventana continuamente entre dos *buffers*. Es rápido pasar al *buffer* alternativo con
 
-`:e #`
+```
+:e #
+```
 
 En ese caso, el alternativo pasa a ser el *buffer* actual, y viceversa.
 
@@ -32,7 +34,9 @@ Para que el contenido de la ventana actual muestre otro *buffer* distinto al que
 
 A parte de la lista de *buffers*, existe otra lista, subconjunto de esta, que incluye los que podríamos denominar *buffers* argumento. Se trata de una lista con los *buffers* correspondientes a los archivos que se especificaron en la línea de comandos al invocar *Vim*. Por ejemplo, si invocamos el editor así:
 
-`vim file1.txt file2.txt`
+```
+vim file1.txt file2.txt
+```
 
 y posteriormente abrimos (por ejemplo con `:e`) los archivos 'file3.txt' y 'file4.txt', tendremos una lista de *buffers* con cuatro elementos ('file1.txt', 'file2.txt', 'file3.txt' y 'file4.txt'), mientras que tendremos una lista de *buffers* argumento con dos elementos ('file1.txt' y 'file2.txt'). Para que una ventana pase a mostrar el contenido de un *buffer* argumento, tenemos los siguientes comandos:
 
@@ -60,7 +64,9 @@ Para la gestión de ventanas se utilizan secuencias de teclado en modo *Normal* 
 
 Para subdividir la ventana actual horizontalmente en dos (una encima de otra), de tal modo que las dos muestren el mismo *buffer*, podemos utilizar el siguiente comando:
 
-`:split`
+```
+:split
+```
 
 o pulsar `C-w s`.
 
@@ -68,25 +74,35 @@ Cuando hablamos de *ventana actual* nos referimos a la ventana donde está el cu
 
 Si lo que queremos es subdividir la ventana verticalmente lo haremos así:
 
-`:vsplit`
+```
+:vsplit
+```
 
 o mediante `C-w v`.
 
 Si al hacer la subdivisión especificamos el nombre de un archivo, la nueva ventana mostrará dicho archivo. Si este se corresponde con uno de los *buffers* existentes, la nueva ventana se asociará a ese *buffer*. De lo contrario, se creará un nuevo *buffer* para ese archivo, asociado a la nueva ventana. Todo esto se aplica tanto a subdivisiones horizontales como verticales:
 
-`:split <archivo>`
+```
+:split <archivo>
+```
 
-`:vsplit <archivo>`
+```
+:vsplit <archivo>
+```
 
 Si lo que queremos es que la nueva ventana muestre un archivo nuevo (vacío y sin guardar en disco), lo haremos entrando
 
-`:new`
+```
+:new
+```
 
 o mediante `C-w n`.
 
 Lo anterior realiza una subdivisión horizontal. Si la queremos vertical:
 
-`:vnew`
+```
+:vnew
+```
 
 Cualquiera de las acciones que crean nuevas ventanas acepta argumento numérico, el cual indica el tamaño (anchura o altura, según el tipo de subdivisión) de la ventana nueva. En el caso de subdividir en modo *Comando*, se puede incluir ese argumento tras los dos puntos, justo antes del comando en sí.
 
@@ -155,17 +171,23 @@ Las pestañas (*tabs*) son disposiciones (*layouts*) de ventanas en pantalla. Pu
 
 El comando `:tabnew` abre una nueva pestaña que contiene una sola ventana con un archivo nuevo. Si queremos que la pestaña nueva tenga un archivo abierto, debemos especificar el nombre del archivo al abrirla:
 
-`:tabnew <archivo>`
+```
+:tabnew <archivo>
+```
 
 Cuando existen múltiples pestañas, podemos ver la lista de las mismas arriba del todo de la pantalla. La pestaña que aparece resaltada es la actual. En esa línea indicadora de pestañas, podemos ver el nombre del archivo activo de cada pestaña. En su caso podremos ver también el signo '+' si alguna de las ventanas que contiene tiene cambios sin guardar en disco. También puede verse el número de ventanas que tiene cada pestaña, en caso de contener más de una.
 
 Para cerrar la pestaña actual, teclearemos
 
-`:tabclose`
+```
+:tabclose
+```
 
 Si queremos cerrar todas las pestañas excepto la actual:
 
-`:tabonly`
+```
+:tabonly
+```
 
 Si el cierre de pestañas que intentamos realizar va a cerrar todas las referencias a un *buffer* con cambios sin guardar, no nos permitirá cerrar esas ventanas, que seguirán abiertas (cerrará solo las que pueda). Para remediarlo, podemos guardar los cambios, forzar la pérdida de cambios (`:tabclose!`), o usar la opción `hidden` como hemos visto anteriormente.
 

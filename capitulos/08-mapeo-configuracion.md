@@ -8,71 +8,101 @@ Existen numerosos mecanismos para configurar el comportamiento de *Vim*. Uno de 
 
 Como hemos visto ya, existen numerosas opciones cuyo estado es de tipo booleano, es decir, están activadas o desactivadas. Pongamos por ejemplo la opción `ic` (`ignorecase`) para ignorar mayúsculas y minúsculas en las búsquedas. Para *activar* esa opción entraremos
 
-`:set ic`
+```
+:set ic
+```
 
 o
 
-`:set ignorecase`
+```
+:set ignorecase
+```
 
 Al igual que `ignorecase`, las opciones tienen su versión abreviada, que puede utilizarse indistintamente con la palabra completa.
 
 Para *desactivar* una opción concreta, bastará añadir el prefijo 'no' a esa opción. En nuestro ejemplo anterior, podemos desactivar `ignorecase` entrando
 
-`:set noignorecase`
+```
+:set noignorecase
+```
 
 o
 
-`:set noic`
+```
+:set noic
+```
 
 Algunas opciones tienen más de un estado posible. Es el caso, por ejemplo, de la opción `display`, que puede tener valores como `truncate`, `lastline` o nada (cadena vacía). En este caso, para cambiar su valor hay que asignárselo mediante el carácter '=' de este modo:
 
-`:set display=truncate`
+```
+:set display=truncate
+```
 
 o
 
-`:set display=`
+```
+:set display=
+```
 
 para asignarle la cadena vacía.
 
 Por otro lado, si no estamos seguros del estado que tiene de una opción concreta, podemos verlo añadiendo el signo de interrogación al final. En nuestro caso, para `ignorecase` entraremos
 
-`:set ignorecase?`
+```
+:set ignorecase?
+```
 
 lo cual nos mostrará el estado actual: 'ignorecase' o 'noignorecase'.
 
 Esto funciona para todas las opciones, tengan estado booleano (activo o inactivo) o no (múltiples valores). En el caso de que no sea así, también podemos consultar su estado sin necesidad de incluir el signo de interrogación:
 
-`:set display`
+```
+:set display
+```
 
 Si queremos ver los valores de todas las opciones cuyo valor difiere de su valor por defecto en *Vim*, entraremos simplemente
 
-`:set`
+```
+:set
+```
 
 Si lo que queremos es ver el estado de *todas* las opciones de *Vim*, entraremos
 
-`:set all`
+```
+:set all
+```
 
 Podemos dar el valor por defecto a una opción utilizando '&':
 
-`:set ignoracase&`
+```
+:set ignoracase&
+```
 
 En el caso de las opciones booleanas, podemos cambiar su estado usando el signo de exclamación:
 
-`:set ignorecase!`
+```
+:set ignorecase!
+```
 
 activará la opción si estaba desactivada, o la desactivará en caso contrario.
 
 Para obtener una información más detallada sobre el funcionamiento de las diversas opciones, se puede usar el comando `:h` (o `:help`) con la opción deseada (obreviada o no), entre comillas simples:
 
-`:h 'ignorecase'`
+```
+:h 'ignorecase'
+```
 
 En cambio, para ver la ayuda sobre un comando concreto, se debe especificar prefijando los dos puntos (':'), en su forma normal o abreviada:
 
-`:h :set`
+```
+:h :set
+```
 
 o
 
-`:h :se`
+```
+:h :se
+```
 
 ### El archivo .vimrc
 
@@ -84,11 +114,15 @@ Existe un archivo *.vimrc* que afecta a todos los usuarios del sistema. A parte,
 
 Como veremos, la salida de este comando utiliza las variables *\$VIM* (directorio de *Vim*) y *\$HOME* (directorio del usuario) para especificar la ruta de estos archivos de configuración. Si queremos saber el valor de esas variables podemos hacerlo mediante
 
-`:echo $VIM`
+```
+:echo $VIM
+```
 
 o
 
-`:echo $HOME`
+```
+:echo $HOME
+```
 
 En cuanto al formato del archivo de configuración, las líneas que empiezan con dobles comillas son ignoradas, pues es la forma de definir comentarios. En cuanto a los comandos, no es necesario escribir los dos puntos iniciales. Un ejemplo de archivo *.vimrc* podría ser:
 
@@ -106,7 +140,9 @@ Para evitar que se pierdan todos estos elementos al cerrar el programa, *Vim* ut
 
 Para configurar qué información deseamos que se mantenga entre una sesión y otra, está la opción `viminfo`, que guarda una cadena de caracteres que define exactamente esta configuración. Para una información detallada de esta opción, se puede utilizar
 
-`:h 'viminfo'`
+```
+:h 'viminfo'
+```
 
 En general, la configuración por defecto de esta opción nos será útil la mayor parte de las veces, de tal modo que no perderemos el contenido de los registros (incluyendo las macros definidas), el historial de comandos, el historial de búsquedas, o las marcas de texto.
 
@@ -128,25 +164,33 @@ Tras el comando hay que especificar la tecla que queremos mapear. Si queremos ma
 
 Por último se debe definir la secuencia de acciones que se llevarán a cabo cuando se pulse el atajo que estamos creando. Veamos un ejemplo:
 
-`:imap aa Pepe`
+```
+:imap aa Pepe
+```
 
 define un atajo de teclado de tal modo que cuando pulsemos la secuencia `aa` dentro de modo *Insertar*, se insertará 'Pepe' en el texto en lugar de 'aa'. Recordemos que si definimos el mapeo en *.vimrc* no es necesario incluir los dos puntos antes del comando.
 
 Es importante recalcar aquí que a la hora de mapear una secuencia de teclado, podemos perder funcionalidades de *Vim* que estén definidas previamente si no vamos con cuidado. Si entramos
 
-`:nmap u dd`
+```
+:nmap u dd
+```
 
 perderemos la funcionalidad original de `u` en modo *Normal*, que es la acción de deshacer la última acción, y en cambio, borrará la línea actual.
 
 Para ver la lista completa de acciones de teclado definidas por defecto en *Vim*, se puede introducir
 
-`:h index.txt`
+```
+:h index.txt
+```
 
 De este modo podemos ver qué secuencias están libres o, si decidimos cambiar algún atajo que no vayamos a utilizar, podemos saber exactamente qué secuencias predefinidas estamos cambiando.
 
 Es posible comprobar el uso por defecto de una pulsación concreta. Por ejemplo, si queremos ver el uso de `C-v` dentro del modo *Insertar*, teclearemos
 
-`:h i_CTRL-V`
+```
+:h i_CTRL-V
+```
 
 Aquí podemos usar el prefijo 'i' (modo *Insertar*), 'c' (modo *Comando* o búsqueda de patrones), 'v' (modo *Visual*) o sin prefijo ni guión bajo (modo *Normal*).
 
@@ -154,7 +198,9 @@ Es frecuente definir atajos de teclado que empiecen por coma (',') o punto y com
 
 Para ver los mapeos definidos en un modo concreto, usaremos el comando pertinente sin argumentos. Por ejemplo:
 
-`:nmap`
+```
+:nmap
+```
 
 nos mostrará los atajos de teclado definidos para el modo *Normal*. Del mismo modo, el resto de comandos de mapeo muestra los atajos definidos en su modo o modos relacionados. En este caso, por ejemplo, `:map!` mostrará la lista de mapeos dentro de los modos *Insertar* y *Comando* (y afines).
 
@@ -164,7 +210,9 @@ Los elementos de la lista que contienen un asterisco ('\*') son mapeos definidos
 
 Para ver una lista de atajos concretos, podemos especificar un prefijo:
 
-`:nmap g`
+```
+:nmap g
+```
 
 mostrará los atajos en modo *Normal* que mapeen secuencias que empiecen por 'g'.
 
@@ -174,15 +222,21 @@ Para eliminar un atajo definido previamente, se utilizan los comandos `:unmap`, 
 
 Supongamos que creamos un atajo de este modo:
 
-`:map! p pepe`
+```
+:map! p pepe
+```
 
 Esto define el mapeo `p` para los modos *Insertar* y *Comando*. Si posteriormente eliminamos el mapa de este modo:
 
-`:cunmap p`
+```
+:cunmap p
+```
 
 el mapeo quedará definido únicamente para el modo *Insertar*. Así, estos dos comandos equivalen a uno solo:
 
-`:imap p pepe`
+```
+:imap p pepe
+```
 
 Para eliminar *todos* los mapeos definidos en un modo o modos concretos, existen los comandos `:mapclear`, `:mapclear!`, `:nmapclear`, `:imapclear`, `:vmapclear`, `:smapclear`, `:xmapclear`, `:cmapclear` y `:omapclear`, relacionados con los respectivos comandos de mapeo.
 
@@ -190,39 +244,57 @@ Para eliminar *todos* los mapeos definidos en un modo o modos concretos, existen
 
 Si la acción a ejecutar definida en un atajo contiene alguna secuencia que a su vez está definida en otro mapeo, será previamente sustituida. Veamos un ejemplo:
 
-`:imap a jkn`
+```
+:imap a jkn
+```
 
-`:imap n rrr`
+```
+:imap n rrr
+```
 
 En este caso, al pulsar `a` dentro de modo normal, se insertará el texto 'jkrrr', dado que la 'n' del mapeo a aplicar está mapeada a su vez a 'rrr'.
 
 Al mecanismo que aplica un mapeo dentro de la secuencia a mapear se le denomina *mapeo anidado o recursivo*. Debe irse con cuidado al definir este tipo de mapeos para no crear recursiones infinitas, como en este caso:
 
-`:imap b abc`
+```
+:imap b abc
+```
 
 Se trata de una recursión infinita, ya que siempre habrá una 'b' que deberá sustituirse. En este caso, cuando pulsemos `b` en modo *Insertar*, se producirá un bucle de mapeos infinitos, que deberemos cortar con `C-c`, generando un resultado impredecible. Veamos un caso menos evidente de recursión infinita:
 
-`:imap a jkn`
+```
+:imap a jkn
+```
 
-`:imap n rst`
+```
+:imap n rst
+```
 
-`:imap t abc`
+```
+:imap t abc
+```
 
 En este caso, al aplicar las distintas sustituciones, se acaba formando un bucle infinito: 'a' se mapea a 'jkn', que quedaría sustituido por 'jkrst', que a su vez se sustituiría por 'jkrsabc', donde vuelve a haber una 'a'.
 
 Existe una excepción a este mecanismo: cuando la secuencia del atajo es un prefijo de la secuencia resultante, no se aplica la sustitución. En este ejemplo:
 
-`:imap ab abcd`
+```
+:imap ab abcd
+```
 
 no se produce sustitución porque 'ab' es prefijo de 'abcd', pero en este caso:
 
-`:imap ab abcdab`
+```
+:imap ab abcdab
+```
 
 no se realizaría la sustitución en el primer 'ab' de la secuencia resultante, pero sí en el segundo, produciéndose, ahora sí, un bucle infinito.
 
 Para evitar que se produzca recursión de ningún tipo, existen las versiones de los comandos de mapeo que no realizan recursión: `:noremap`, `:noremap!`, `:nnoremap`, `:inoremap`, `:vnoremap`, `:snoremap`, `:xnoremap`, `:cnoremap` y `:onoremap`. En este ejemplo:
 
-`:inoremap b abc`
+```
+:inoremap b abc
+```
 
 al pulsar `b` en modo *Insertar* no se producirá ningún tipo de sustitución en la secuencia resultante y simplemente se insertará el texto 'abc'.
 
@@ -260,13 +332,17 @@ En cuanto a las teclas que se presionan juntamente con la tecla Control, la form
 
 Veamos un ejemplo con esta notación:
 
-`:inoremap <C-b> a<C-b>c`
+```
+:inoremap <C-b> a<C-b>c
+```
 
 En este caso, cada vez que tecleemos `C-b` en modo *Insertar*, se insertarán tres caracteres en el texto: 'a', '\<C-b\>' (se verá en pantalla como *\^B*) y 'c'.
 
 Es posible mapear un atajo de teclado a una acción nula (sin efecto):
 
-`:nnoremap <C-b> <Nop>`
+```
+:nnoremap <C-b> <Nop>
+```
 
 Hay que tener en cuenta también que en *Vim* existe la siguente equivalencia de teclas: `C-i` equivale al tabulador, `C-[` equivale a `Esc`, `C-m` equivale a `Intro` y `C-h` equivale a la tecla de retroceso. Pueden utilizarse indistintamente cualquiera de las dos formas.
 
@@ -276,7 +352,9 @@ En el apartado sobre macros vimos dos formas de definirlas: mediante `@` en modo
 
 A este comando hay que pasarle por parámetro la letra correspondiente al registro que deseamos cambiar, precedida por '@'; seguidamente un signo '=' y el texto que debe almacenarse en el registro, entre comillas simples. Por ejemplo:
 
-`:let @s='eaPepe'`
+```
+:let @s='eaPepe'
+```
 
 define el contenido del registro 's', que en este caso es una macro que quedará, lógicamente, asociada al registro 's'. La macro inserta el texto 'Pepe' al final de la palabra actual, terminando en modo *Insertar*.
 

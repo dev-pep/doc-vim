@@ -6,11 +6,15 @@
 
 Cuando editamos código fuente, resulta muy útil tener visualmente presente la información acerca de la línea y columna en la que se halla el cursor. Para ello disponemos de la posibilidad de activar los números de línea mediante
 
-`:set number`
+```
+:set number
+```
 
 Existe también la modalidad de numeración relativa, la cual, en lugar de mostrar el número de cada una de las líneas en pantalla, muestra la distancia a la línea actual, y solo en esta, el número de línea. Se activa mediante
 
-`:ser relativenumber`
+```
+:ser relativenumber
+```
 
 La utilidad de este modo de numeración reside en el hecho de que en *Vim* se utiliza con mucha frecuencia el argumento numérico para definir rangos de líneas, y esta modalidad permite ver fácilmente la cantidad de líneas que componen los rangos que necesitamos definir.
 
@@ -18,21 +22,29 @@ Si `relativenumber` está activado y `number` no lo está, la línea actual most
 
 Por otro lado, como vimos con anterioridad, también podemos ver el número de columna (y *byte*) en la línea de estado, utilizando
 
-`:set ruler`
+```
+:set ruler
+```
 
 La información mostrada por esta opción es configurable. Para más información, puede consultarse la ayuda de *Vim*:
 
-`:h 'ruler'`
+```
+:h 'ruler'
+```
 
 En cuanto al resaltado sintáctico, es una utilidad que permite aumentar la legibilidad del código de forma dramática. Este mecanismo asigna un color distinto a los diferentes elementos del código (literales, palabras clave, comentarios, etc.).
 
 Para activar el resaltado podemos entrar:
 
-`:syntax on`
+```
+:syntax on
+```
 
 y para desactivarlo
 
-`:syntax off`
+```
+:syntax off
+```
 
 Por otro lado, *Vim* utiliza un esquema sintáctico u otro dependiendo del contenido de la opción `syntax`.
 
@@ -50,7 +62,9 @@ Cuando vimos la diferencia entre líneas de pantalla y líneas de archivo, expli
 
 Existe otro modo de visualizar estas líneas que consigue que cada línea de archivo se corresponda exactamente con una línea en pantalla. Esta modalidad evita que las líneas de archivo sean fragmentadas. Esto se consigue desactivando la opción `wrap`, activada por defecto:
 
-`:set nowrap`
+```
+:set nowrap
+```
 
 De este modo, las líneas de archivo con una longitud mayor a la anchura de pantalla se muestran parcialmente, aunque sigue siendo posible desplazarse a cualquier punto de estas, ya que *Vim* desplaza el texto horizontalmente de forma adecuada cuando es necesario para hacer posible esa visualización.
 
@@ -58,7 +72,9 @@ De todas formas, no es muy aconsejable en programación tener líneas tan largas
 
 Para tener un margen a la derecha del texto, evitando así la creación de líneas demasiado largas, debemos insertar finales de línea adecuadamente. Existe un modo de hacerlo de forma automática, definiendo la anchura máxima de texto con la opción `textwidth`, a la que debemos asignar el número máximo de columnas que vamos a permitir:
 
-`:set textwidth=50`
+```
+:set textwidth=50
+```
 
 establece una anchura máxima de 50 columnas de pantalla. A medida que escribamos, *Vim* insertará un fin de línea cada vez que tecleemos un carácter no blanco más allá del umbral definido. El fin de línea se inserta entre palabras para que no quede ninguna palabra partida, si es posible. Los caracteres blancos justo antes y después del fin de línea creado son eliminados.
 
@@ -156,7 +172,9 @@ Especialmente útil en este caso puede resultar la selección de objetos de text
 
 Adicionalmente, podemos crear pliegues desde el modo *Comando* entrando un rango de líneas delante del comando `:fold`:
 
-`:25,60 fold`
+```
+:25,60 fold
+```
 
 crea un pliegue entre las líneas 25 y 60, ambas inclusive.
 
@@ -190,7 +208,9 @@ Para *Vim*, los pliegues más exteriores tienen nivel 1. Un pliegue definido den
 
 Por lo tanto, cuando hacemos
 
-`:set foldlevel=0`
+```
+:set foldlevel=0
+```
 
 todos los pliegues del archivo se contraen. Si le asignamos el número 3, los pliegues de nivel 1 hasta 3 se abrirán, mientras los de nivel 4 y superior se cerrarán.
 
@@ -198,11 +218,15 @@ La orden `zM` establece el valor de esta opción en 0, es decir, contrae todos l
 
 Podemos usar también el modo *Comando* para abrir y cerrar pliegues, utilizando los comandos `:foldopen` y `:foldclose` precedidos de un rango de líneas:
 
-`:25 foldopen`
+```
+:25 foldopen
+```
 
 abre el pliegue en la línea 25, mientras que
 
-`:13,30 foldclose`
+```
+:13,30 foldclose
+```
 
 contraería todos los pliegues que tengan alguna línea entre la 13 y la 30.
 
@@ -256,29 +280,39 @@ Normalmente almacenaremos cada uno de nuestros proyectos en su correspondiente d
 
 Desde la línea de comandos de nuestro sistema operativo, estableciendo el directorio de trabajo en el directorio raíz del proyecto, podemos ejecutar la herramienta *Ctags* de una forma parecida a esta:
 
-`ctags -R .`
+```
+ctags -R .
+```
 
 Este comando creará el archivo *tags* en el directorio raíz del proyecto. En su examen de archivos de código, pasará por todos los subdirectorios de ese directorio raíz ('.', directorio actual), gracias al parámetro '-R' que indica modo recursivo.
 
 En el caso que queramos que solo un archivo concreto o grupo de ellos sea incluido en el índice, podemos indicarlo de una forma como esta:
 
-`ctags *.c`
+```
+ctags *.c
+```
 
 En este caso, solo los archivos con extensión '.c' que residan en el directorio actual serán utilizados.
 
 Otra característica útil de *Ctags* es la posibilidad de añadir entradas al índice sin borrar el contenido anterior. Esto se consigue, normalmente, mediante el parámetro '-a'. Así, si después de ejecutar el anterior comando entramos
 
-`ctags -a include/*.h`
+```
+ctags -a include/*.h
+```
 
 se añadirán al anterior índice los archivos de cabecera del subdirectorio 'include'.
 
 Todos estos comandos pueden, en realidad, ejecutarse desde *Vim*, de la forma que ya conocemos:
 
-`:!ctags -R .`
+```
+:!ctags -R .
+```
 
 Para un uso correcto, debemos tener en cuenta el directorio de trabajo al ejecutar estos comandos externos. Para saber el directorio de trabajo actual de *Vim*, es suficiente con entrar
 
-`:pwd`
+```
+:pwd
+```
 
 Si deseamos cambiar dicho directorio, podemos usar el comando `:cd` desde el mismo *Vim*.
 
@@ -288,13 +322,17 @@ Una vez hayamos creado un archivo *tags* en el directorio de trabajo, podremos a
 
 Si estamos editando un archivo y queremos examinar la definición de una función llamada 'fun', por ejemplo, pero no sabemos en qué archivo se halla definida, podemos teclear simplemente
 
-`:tag fun`
+```
+:tag fun
+```
 
 y *Vim* nos llevará al punto exacto donde se encuentra esa definición, abriendo el archivo adecuado si es necesario. Hay que tener en cuenta que si ello representa cerrar el archivo actual y existen cambios sin guardar en este, deberemos guardarlo antes o especificar el forzado de esta acción con '!' para asumir la pérdida de esos cambios.
 
 Una vez examinada la información que deseábamos ver acerca de esa función, podemos volver al punto donde estábamos antes de ejecutar el comando `:tag` introduciendo
 
-`:pop`
+```
+:pop
+```
 
 Una vez más, si eso implica perder los cambios, habrá que guardar o forzar.
 
@@ -328,7 +366,9 @@ Para probar y ejecutar el código fuente que estamos editando puede ser necesari
 
 Si estamos editando un programa en un lenguaje compilado, para generar ese archivo ejecutable será suficiente una llamada al compilador. Suponiendo un programa en lenguaje *C* llamado 'myprogram.c' que esté en el directorio de trabajo actual, se podría usar un comando en *Vim* similar a este:
 
-`:!gcc -o myprogram myprogram.c`
+```
+:!gcc -o myprogram myprogram.c
+```
 
 Con objeto de simplificar este proceso, se puede mapear este comando de compilación, o crear una macro para no tener que teclearlo cada vez que deseemos compilar.
 

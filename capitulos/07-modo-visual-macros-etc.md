@@ -81,7 +81,9 @@ Para repetir la última macro invocada, podemos utilizar `@@`.
 
 Veamos un ejemplo: Si queremos crear una macro que simplemente inserte tres asteriscos ('\*\*\*') justo antes de la posición del cursor, y asociar esa acción al registro 'k', teclearemos:
 
-`qki***<Esc>q`
+```
+qki***<Esc>q
+```
 
 Veámoslo desglosado:
 
@@ -121,22 +123,32 @@ Es posible visualizar las marcas actuales definidas con el comando `:marks`. Ell
 
 Podemos ver una o varias marcas específicas:
 
-`:marks aB`
+```
+:marks aB
+```
 
 nos mostrará las marcas 'a' y 'B'.
 
 Es posible eliminar marcas mediante el comando `:delm` seguido de las marcas a borrar. Por ejemplo:
 
-`:delm a`
+```
+:delm a
+```
 
 elimina la marca 'a',
 
-`:delm acB`
+```
+:delm acB
+```
 
 elimina las marcas 'a', 'c' y 'B', mientras que
 
-`:delm a-d`
+```
+:delm a-d
+```
 
 elimina las marcas 'a', 'b', 'c' y 'd'. Es posible eliminar todas las marcas locales del archivo actual mediante
 
-`:delm!`
+```
+:delm!
+```

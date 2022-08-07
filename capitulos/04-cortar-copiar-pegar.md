@@ -79,11 +79,15 @@ Existen algunos registros especiales, como el asociado al carácter ':', que gua
 
 El comando `:reg` nos muestra el contenido de todos los registros, tanto los especiales como los numerados, los registros con nombre o el registro sin nombre (asociado al carácter dobles comillas, ***"***). Si deseamos ver el contenido de un registro o registros concretos podemos especificarlo también. Por ejemplo:
 
-`:reg a`
+```
+:reg a
+```
 
 nos mostrará el contenido del registro 'a', mientras que mediante
 
-`:reg 12c`
+```
+:reg 12c
+```
 
 podremos ver el contenido de los registros 1,2 y c.
 
@@ -96,7 +100,9 @@ Para utilizar el portapapeles del sistema (el *clipboard*) y poder transferir te
 
 Es importante observar que no todas las versiones de *Vim* están compiladas con acceso al portapapeles. Para saber si es nuestro caso, ejecutaremos
 
-`vim --version`
+```
+vim --version
+```
 
 desde la línea de comandos, y buscaremos las entradas 'clipboard' y 'xterm_clipboard'. Si aparece un signo '+' delante de cualquiera de estos módulos, tenemos acceso al portapapeles. De lo contrario, no disponemos de esta funcionalidad.
 
@@ -108,11 +114,15 @@ En modo comando existen herramientas muy útiles para borrar, copiar y mover tex
 
 En esta sección nos resultará útil la opción `number`, que nos muestra los números de línea. Para activarla:
 
-`:set number`
+```
+:set number
+```
 
 Podemos desplazarnos rápidamente a una línea concreta introduciendo el número de línea:
 
-`:45`
+```
+:45
+```
 
 mueve el cursor a la línea 45, concretamente al primer carácter no blanco de esa línea. Si la línea solo tiene caracteres blancos, se desplaza al último de ellos.
 
@@ -120,21 +130,29 @@ En modo comando también podemos utilizar los comandos *delete* (`d`), *change* 
 
 Para borrar una línea concreta:
 
-`:45d`
+```
+:45d
+```
 
 elimina la línea 45 y el cursor se queda sobre la nueva línea 45.
 
 En lugar de una simple línea, podemos definir un *rango de líneas*. Dos números separados por una coma definen el rango comprendido entre las dos líneas especificadas, ambas incluidas.
 
-`:3,15d`
+```
+:3,15d
+```
 
 elimina las líneas 3 a 15, ambas incluidas. También añade el texto eliminado a los registros correspondientes (sin nombre y numerados).
 
-`:3,15y`
+```
+:3,15y
+```
 
 copia las líneas 3 a 15 en el registro sin nombre (y en el registro 0).
 
-`:3,15c`
+```
+:3,15c
+```
 
 esperará que introduzcamos una o varias líneas. Una vez terminado, pulsaremos `Esc`. Las líneas introducidas sustituirán a las líneas 3 a 15. Si la última línea tecleada no termina en fin de línea (`Intro`), será descartada. En este caso, el texto eliminado no se copia a ningún registro.
 
@@ -149,57 +167,83 @@ A la hora de definir números de línea, existen algunos caracteres especiales:
 
 Veamos algunos ejemplos:
 
-`:-5`
+```
+:-5
+```
 
 Desplaza el cursor 5 líneas hacia arriba.
 
-`:%d`
+```
+:%d
+```
 
 borra todas las líneas del archivo.
 
-`:d`
+```
+:d
+```
 
 borra la línea actual.
 
-`:c`
+```
+:c
+```
 
 cambia la línea actual. Debemos introducir el nuevo texto (terminado siempre en `Intro`), y finalmente `Esc`.
 
-`:y`
+```
+:y
+```
 
 copia (*yank*) la línea actual.
 
-`:.,$d`
+```
+:.,$d
+```
 
 elimina todas las líneas desde la actual hasta la última del archivo.
 
-`:.,.+20d`
+```
+:.,.+20d
+```
 
 borra la línea actual y las siguientes 20.
 
-`:,++d`
+```
+:,++d
+```
 
 borra la línea actual y las dos siguientes.
 
 El comando `m` se utiliza para mover texto:
 
-`:3,15m67`
+```
+:3,15m67
+```
 
 mueve las líneas 3 a 15 *a continuación* de la línea 67. Si queremos mover al principio del archivo (antes de la línea 1), debemos indicar línea 0:
 
-`:3,15m0`
+```
+:3,15m0
+```
 
 Para mover un fragmento de texto al final de todo:
 
-`:20,.m$`
+```
+:20,.m$
+```
 
 mueve las líneas 20 hasta la actual al final del archivo.
 
-`:25,$m.-1`
+```
+:25,$m.-1
+```
 
 mueve las líneas de la 25 hasta la última a continuación de la línea que está antes de la línea actual, es decir, justo antes de la línea actual.
 
-`:m$`
+```
+:m$
+```
 
 mueve la línea actual al final del archivo.
 
@@ -209,25 +253,35 @@ El texto movido no es copiado a ningún registro.
 
 En modo *Comando* podemos aprovechar el historial de comandos para reutilizar los que hemos tecleado con anterioridad. A este mecanismo se accede mediante las flechas arriba y abajo cuando estamos en dicho modo y no hay nada tecleado a la derecha de los dos puntos (`:`).
 
-`:=`
+```
+:=
+```
 
 muestra el número total de líneas del archivo.
 
-`:.=`
+```
+:.=
+```
 
 muestra el número de línea actual.
 
 Para guardar un fragmento del archivo a disco:
 
-`:.,$w`
+```
+:.,$w
+```
 
 guardaría desde la línea actual hasta la última, siempre y cuando el archivo que estamos editando ya tenga nombre. Sin embargo, la operación *no se ejecutará*, ya que eso implicaría la pérdida de texto completo que está en disco (en este caso, se perderían las líneas anteriores a la actual). Para que un guardado parcial se ejecute, necesitamos incluir el signo de exclamación:
 
-`:.,$w!`
+```
+:.,$w!
+```
 
 En cambio, si le damos un nombre de archivo distinto al nombre actual, nos permitirá realizar el guardado parcial sin el símbolo `!`, a no ser que el nuevo nombre ya exista, en cuyo caso, sí deberemos incluirlo:
 
-`:5,25w <archivo>`
+```
+:5,25w <archivo>
+```
 
 guarda las líneas 5 a 25 (incluidas) en el archivo con el nombre especificado. Como siempre, el nombre puede ser un simple nombre de fichero, o incluir una ruta relativa o absoluta. Un guardado parcial no cambia el nombre del archivo actual, ni siquiera aunque este no tenga nombre.
 
@@ -235,24 +289,34 @@ Si el nombre empieza por los caracteres `>>`, el texto se añadirá al final del
 
 En el modo *Comando* se pueden combinar dos o más comandos en una misma línea utilizando el carácter `|` entre ellos:
 
-`: <comando1> | <comando2> | ...`
+```
+: <comando1> | <comando2> | ...
+```
 
 En este caso conviene apuntar que así como el primero de los comandos de la línea necesita incluir los dos puntos iniciales (`:`), en los sucesivos comandos no es necesario.
 
 Podemos insertar un archivo completo a continuación de la línea actual mediante el comando `r`:
 
-`:r <archivo>`
+```
+:r <archivo>
+```
 
 incluye el contenido íntegro del archivo especificado bajo la línea actual.
 
-`:$r <archivo>`
+```
+:$r <archivo>
+```
 
 añade el contenido de ese archivo al final. Si queremos que lo añada al principio:
 
-`:0r <archivo>`
+```
+:0r <archivo>
+```
 
 Para insertarlo en una línea específica:
 
-`:130r <archivo>`
+```
+:130r <archivo>
+```
 
 Lo inserta tras la línea 130.
