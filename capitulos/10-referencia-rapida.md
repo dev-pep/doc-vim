@@ -180,7 +180,7 @@ Autocompletar:
 
 ### Otros modos
 
-`Esc` vuelve a modo Normal desde cualquier otro modo.
+`Esc` vuelve a modo *Normal* desde cualquier otro modo.
 
 `C-r R` inserta el contenido de un registro en modo *Insertar*.
 
