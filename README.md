@@ -1,8 +1,16 @@
 # Apuntes de Vim
 
-Estos son mis apuntes sobre el editor *Vim*.
+Gracias por leer estos apuntes sobre el editor *Vim*.
 
-## Tabla de contenido
+La intención del presente texto es dar una explicación exhaustiva de los detalles más relevantes de este editor. No se trata de un tutorial o de una guía paso a paso, sino más bien de un **resumen completo**, extraído de documentación existente (y libremente accesible) en la red. Se añaden aclaraciones y ampliaciones relevantes donde se ha estimado necesario.
+
+## Copia impresa
+
+Para obtener una copia impresa, o un *ebook* de estos apuntes (podría no ser la versión más actual):
+
+[enlace pendiente]
+
+## Sumario
 
 1. [Introducción](capitulos/01-introduccion.md)
 2. [Tutorial completo](capitulos/02-tutorial.md)
