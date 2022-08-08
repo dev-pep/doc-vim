@@ -2,7 +2,7 @@
 
 Gracias por leer estos apuntes sobre el editor *Vim*.
 
-La intención del presente texto es dar una explicación exhaustiva de los detalles más relevantes de este editor. No se trata de un tutorial o de una guía paso a paso, sino más bien de un **resumen completo**, extraído de documentación existente (y libremente accesible) en la red. Se añaden aclaraciones y ampliaciones relevantes donde se ha estimado necesario.
+La intención del presente texto es dar una explicación exhaustiva de los detalles más relevantes de este editor. No se trata de un tutorial o de una guía paso a paso, sino más bien de un **resumen completo**, extraído de documentación existente (y libremente accesible) en la red. Se han añadido aclaraciones y ampliaciones relevantes donde se ha estimado necesario.
 
 ## Copia impresa
 
