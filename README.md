@@ -12,7 +12,7 @@ Este trabajo está en permanente actualización. Para obtener una copia impresa,
 
 Para acceder (gratuitamente) a la versión más actualizada:
 
-https://github.com/dev-pep/doc-vim
+<https://github.com/dev-pep/doc-vim>
 
 ## Sumario
 
