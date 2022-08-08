@@ -4,11 +4,15 @@ Gracias por leer estos apuntes sobre el editor *Vim*.
 
 La intención del presente texto es dar una explicación exhaustiva de los detalles más relevantes de este editor. No se trata de un tutorial o de una guía paso a paso, sino más bien de un **resumen completo**, extraído de documentación existente (y libremente accesible) en la red. Se han añadido aclaraciones y ampliaciones relevantes donde se ha estimado necesario.
 
-## Copia impresa
+## Copias y actualizaciones
 
-Para obtener una copia impresa, o un *ebook* de estos apuntes (podría no ser la versión más actual):
+Este trabajo está en permanente actualización. Para obtener una copia impresa, o un *ebook* de estos apuntes (podría no ser la versión más actual):
 
 [enlace pendiente]
+
+Para acceder (gratuitamente) a la versión más actualizada:
+
+https://github.com/dev-pep/doc-vim
 
 ## Sumario
 
