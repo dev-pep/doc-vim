@@ -6,11 +6,13 @@ La intención del presente texto es dar una explicación exhaustiva de los detal
 
 ## Copias y actualizaciones
 
-Este trabajo está en permanente actualización. Para obtener una copia impresa, o un *ebook* de estos apuntes (podría no ser la versión más actual):
+Este trabajo está en permanente actualización.
 
-[enlace pendiente]
+Para obtener una copia impresa, o un *ebook* de estos apuntes (podría no ser la versión más actual):
 
-Para acceder (gratuitamente) a la versión más actualizada:
+<https://www.amazon.es/dp/B0B91W8XRB>
+
+Puede acceder de forma gratuita a la versión más actualizada de esta obra, visitando el siguiente repositorio en *GitHub*:
 
 <https://github.com/dev-pep/doc-vim>
 
@@ -29,13 +31,5 @@ Para acceder (gratuitamente) a la versión más actualizada:
 
 ---
 
-[![CC BY 4.0][cc-by-shield]][cc-by]
-
 Esta obra está bajo una
-[Licencia Creative Commons Atribución 4.0 Internacional][cc-by].
-
-[![CC BY 4.0][cc-by-image]][cc-by]
-
-[cc-by]: https://creativecommons.org/licenses/by/4.0/deed.es
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+[Licencia Creative Commons Atribución 4.0 Internacional](https://creativecommons.org/licenses/by/4.0/deed.es).

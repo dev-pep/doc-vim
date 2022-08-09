@@ -14,4 +14,4 @@ La idea es ir avanzando hasta un nivel en el que pueda usarse *Vim* de forma efi
 
 ## Obtener Vim
 
-Para obtener *Vim*, así como instrucciones para su instalación, ayuda, trucos, consejos, referencia completa y mucho más, se puede consultar el sitio oficial del editor en (<https://www.vim.org>).
+Para obtener *Vim*, así como instrucciones para su instalación, ayuda, trucos, consejos, referencia completa y mucho más, se puede consultar el sitio oficial del editor en <https://www.vim.org>.
